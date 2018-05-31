@@ -1,0 +1,8 @@
+2
+ID		1	2	
+Nucleus		1HN	15N	
+Frequency	599.45	60.12	
+Points		1024	32	
+SweepWidth	3000	2200	
+Domain		time	frequency
+Reference	4.772	118.5

@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<premis:premis xmlns:premis="http://www.loc.gov/premis/v3" xmlns:builder="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0" xsi:schemaLocation="http://www.loc.gov/premis/v3 http://www.loc.gov/standards/premis/premis.xsd">
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_000</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>varian</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--Varian import-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_000</connjur:spectrumIdentifier>
+          <connjur:spectralFormat>
+            <connjur:formatName>varian</connjur:formatName>
+            <connjur:formatSpecification>https://www.agilent.com/cs/library/usermanuals/public/0199937900a.pdf</connjur:formatSpecification>
+            <connjur:formatByteOrder>Big Endian</connjur:formatByteOrder>
+            <connjur:formatNumericType>Integer 4 byte</connjur:formatNumericType>
+          </connjur:spectralFormat>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sign>+</connjur:sign>
+            <connjur:negateImaginaries>true</connjur:negateImaginaries>
+            <connjur:sourceChannel defaultSetting="false">1</connjur:sourceChannel>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:spectralFrequency>600</connjur:spectralFrequency>
+            <connjur:referencePeakPosition>5000</connjur:referencePeakPosition>
+            <connjur:referencePeakFrequency>2795</connjur:referencePeakFrequency>
+            <connjur:domain>time</connjur:domain>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:firstScalePoint>-2205</connjur:firstScalePoint>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sign>+</connjur:sign>
+            <connjur:negateImaginaries>true</connjur:negateImaginaries>
+            <connjur:sourceChannel defaultSetting="false">2</connjur:sourceChannel>
+            <connjur:sweepwidth units="Hz">3000</connjur:sweepwidth>
+            <connjur:spectralFrequency>151</connjur:spectralFrequency>
+            <connjur:referencePeakPosition>5016</connjur:referencePeakPosition>
+            <connjur:referencePeakFrequency>2795</connjur:referencePeakFrequency>
+            <connjur:domain>time</connjur:domain>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:constantPhase>001</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:firstScalePoint>-2220</connjur:firstScalePoint>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_001</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--Negates values once for each imaginary quadrature.-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_001</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>1024</connjur:totalPoints>
+            <connjur:firstScalePoint>-2205</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>time</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>1024</connjur:totalPoints>
+            <connjur:firstScalePoint>-2205</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>time</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_002</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--SolventSupressPipe:nmrPipe -fn SOL -verb -mode 1 -fl 16 -fs 1 -sf 1.1 -head 0-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_002</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>1024</connjur:totalPoints>
+            <connjur:firstScalePoint>-2205</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>time</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>1024</connjur:totalPoints>
+            <connjur:firstScalePoint>-2205</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>time</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_003</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--GaussianMultiplyPipe:nmrPipe -fn GMB -lb -20.2 -gb 0.2 -c 1.0 -start 1 -size 1024-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_003</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>1024</connjur:totalPoints>
+            <connjur:firstScalePoint>-2205</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>time</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>1024</connjur:totalPoints>
+            <connjur:firstScalePoint>-2205</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>time</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_004</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--ZeroFillPipe:nmrPipe -fn ZF-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_004</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>2048</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>time</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>2048</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>time</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_005</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--FourierTransformPipe:nmrPipe -fn FT-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_005</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>2048</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>2048</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_006</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--PhaseCorrectionPipe:nmrPipe -fn PS -p0 -130.0 -p1 0.0 -verb-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_006</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>2048</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>2048</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_007</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--ExtractPipe:nmrPipe -fn EXT -verb -x1 1400.0pts -xn 2048.0pts -round 1 -sw-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_007</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_008</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--DeleteImaginariesPipe:nmrPipe -verb -di-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_008</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_009</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--LinearPredictAfterPipe:nmrPipe -fn LP -verb -after -pred 128 -x1 1 -xn 128 -ord 8 -f-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_009</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_010</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--ApodSineSP:nmrPipe -fn SP -verb -off 0.3888889 -end 1.0 -pow 1.0 -c 1.0 -start 1 -size 256-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_010</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_011</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--ZeroFillPipe:nmrPipe -fn ZF-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_011</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_012</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--FourierTransformPipe:nmrPipe -fn FT-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_012</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_013</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--PhaseCorrectionPipe:nmrPipe -fn PS -p0 0.0 -p1 0.0 -verb-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_013</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_014</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--FreqDomainBaselineCorrectionPipe:nmrPipe -fn POLY -verb -auto -sx1 1.0pts -sxn 512.0pts -fx1 1.0pts -fxn 512.0pts -ord 4 -nw 1 -window 8 -frac 0.33 -nf 1.5 -noise 0.0-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_014</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_015</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>NBX</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd" current="TRUE">
+          <!--DeleteImaginariesPipe:nmrPipe -verb -di-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_015</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">2697</connjur:sweepwidth>
+            <connjur:pointType>real</connjur:pointType>
+            <connjur:totalPoints>649</connjur:totalPoints>
+            <connjur:firstScalePoint>-2200</connjur:firstScalePoint>
+            <connjur:sign>-</connjur:sign>
+            <connjur:negateImaginaries>false</connjur:negateImaginaries>
+            <connjur:decoupledNucleus>H1</connjur:decoupledNucleus>
+            <connjur:constantPhase>-079</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:domain>frequency</connjur:domain>
+            <connjur:sampling>uniform</connjur:sampling>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_000</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>acquisition</premis:eventType>
+    <premis:eventDateTime>Fri Jun 02 00:00:00 EDT 2000</premis:eventDateTime>
+    <premis:eventDetailInformation/>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>CONNJUR spectrum translator</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_000</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_001</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>Negates values once for each imaginary quadrature.</premis:eventType>
+    <premis:eventDateTime>Fri May 11 11:16:37 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation/>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>CONNJUR spectrum translator</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_001</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_002</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn SOL -verb -mode 1 -fl 16 -fs 1 -sf 1.1 -head 0</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:53 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:mode>LOWPASS</connjur:mode>
+          <connjur:shape>BOXCAR</connjur:shape>
+          <connjur:splineNoise>1.0</connjur:splineNoise>
+          <connjur:smoothFactor>1.1</connjur:smoothFactor>
+          <connjur:polynomialExtrapolation>false</connjur:polynomialExtrapolation>
+          <connjur:mirrorImageExtrapolation>false</connjur:mirrorImageExtrapolation>
+          <connjur:adjustSequentialData>true</connjur:adjustSequentialData>
+          <connjur:adjustOverSampledData>true</connjur:adjustOverSampledData>
+          <connjur:skipPoints>0</connjur:skipPoints>
+          <connjur:filterLength units="Points">16</connjur:filterLength>
+          <connjur:dimension>1</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_002</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_003</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn GMB -lb -20.2 -gb 0.2 -c 1.0 -start 1 -size 1024</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:53 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:exponentialTerm>-20.2</connjur:exponentialTerm>
+          <connjur:gaussianTerm>0.2</connjur:gaussianTerm>
+          <connjur:firstPointScale>1.0</connjur:firstPointScale>
+          <connjur:startLocationOfApodizeWindow units="Points   ">1</connjur:startLocationOfApodizeWindow>
+          <connjur:size units="Points   ">1024</connjur:size>
+          <connjur:setPointsOutsideWindowEqualToOne>false</connjur:setPointsOutsideWindowEqualToOne>
+          <connjur:dimension>1</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_003</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_004</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn ZF</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:53 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:fillSizeCalculationMethod>AUTO</connjur:fillSizeCalculationMethod>
+          <connjur:doubling>0</connjur:doubling>
+          <connjur:fillSize units="points">1024</connjur:fillSize>
+          <connjur:dimension>1</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_004</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_005</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn FT</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:53 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:setAutomatically>true</connjur:setAutomatically>
+          <connjur:transformRealDataOnly>false</connjur:transformRealDataOnly>
+          <connjur:negateImaginaries>false</connjur:negateImaginaries>
+          <connjur:useSignAlternation>false</connjur:useSignAlternation>
+          <connjur:adjust_Sequential_Data>true</connjur:adjust_Sequential_Data>
+          <connjur:adjust_OverSampled_Data>true</connjur:adjust_OverSampled_Data>
+          <connjur:dimension>1</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_005</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_006</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn PS -p0 -130.0 -p1 0.0 -verb</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:53 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:zeroOrderPhaseCorrection units="degrees">-130.0</connjur:zeroOrderPhaseCorrection>
+          <connjur:firstOrderPhaseCorrection units="degrees">0.0</connjur:firstOrderPhaseCorrection>
+          <connjur:dimension>1</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_006</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_007</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn EXT -verb -x1 1400.0pts -xn 2048.0pts -round 1 -sw</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:53 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:region>COORDINATES</connjur:region>
+          <connjur:units>pts</connjur:units>
+          <connjur:roundSizeToNearestN units="Points">1</connjur:roundSizeToNearestN>
+          <connjur:xExtractRangeStart units="pts">1400.0</connjur:xExtractRangeStart>
+          <connjur:xExtractRangeEnd units="pts">2048.0</connjur:xExtractRangeEnd>
+          <connjur:adjustSweepWidthAndPPM>true</connjur:adjustSweepWidthAndPPM>
+          <connjur:roundToNearestPowerOf2>false</connjur:roundToNearestPowerOf2>
+          <connjur:dimension>1</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_007</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_008</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -verb -di</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:53 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:dimension>1</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_008</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_009</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn LP -verb -after -pred 128 -x1 1 -xn 128 -ord 8 -f</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:54 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:numberPoints units="Points">128</connjur:numberPoints>
+          <connjur:dataStart units="Points">1</connjur:dataStart>
+          <connjur:dataEnd units="Points">128</connjur:dataEnd>
+          <connjur:order units="Coefficients   ">8</connjur:order>
+          <connjur:direction>FORWARD</connjur:direction>
+          <connjur:dimension>2</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_009</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_010</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn SP -verb -off 0.3888889 -end 1.0 -pow 1.0 -c 1.0 -start 1 -size 256</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:54 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:offset units="Π radians  ">0.3888889</connjur:offset>
+          <connjur:offsetDegrees units="degrees">70.0</connjur:offsetDegrees>
+          <connjur:end units="Π radians  ">1.0</connjur:end>
+          <connjur:endDegrees units="degrees">180.0</connjur:endDegrees>
+          <connjur:power>1.0</connjur:power>
+          <connjur:startLocationOfApodizeWindow units="Points">1</connjur:startLocationOfApodizeWindow>
+          <connjur:numberOfPointsInApodizeWindow units="Points">256</connjur:numberOfPointsInApodizeWindow>
+          <connjur:firstPointScale>1.0</connjur:firstPointScale>
+          <connjur:dimension>2</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_010</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_011</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn ZF</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:54 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:fillSizeCalculationMethod>AUTO</connjur:fillSizeCalculationMethod>
+          <connjur:doubling>0</connjur:doubling>
+          <connjur:fillSize units="points">256</connjur:fillSize>
+          <connjur:dimension>2</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_011</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_012</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn FT</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:54 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:setAutomatically>true</connjur:setAutomatically>
+          <connjur:transformRealDataOnly>false</connjur:transformRealDataOnly>
+          <connjur:negateImaginaries>false</connjur:negateImaginaries>
+          <connjur:useSignAlternation>false</connjur:useSignAlternation>
+          <connjur:adjust_Sequential_Data>true</connjur:adjust_Sequential_Data>
+          <connjur:adjust_OverSampled_Data>true</connjur:adjust_OverSampled_Data>
+          <connjur:dimension>2</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_012</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_013</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn PS -p0 0.0 -p1 0.0 -verb</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:54 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:zeroOrderPhaseCorrection units="degrees">0.0</connjur:zeroOrderPhaseCorrection>
+          <connjur:firstOrderPhaseCorrection units="degrees">0.0</connjur:firstOrderPhaseCorrection>
+          <connjur:dimension>2</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_013</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_014</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn POLY -verb -auto -sx1 1.0pts -sxn 512.0pts -fx1 1.0pts -fxn 512.0pts -ord 4 -nw 1 -window 8 -frac 0.33 -nf 1.5 -noise 0.0</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:54 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:units>pts</connjur:units>
+          <connjur:auto>true</connjur:auto>
+          <connjur:subtractRegionStart units="pts">1.0</connjur:subtractRegionStart>
+          <connjur:subtractRegionEnd units="pts">512.0</connjur:subtractRegionEnd>
+          <connjur:initialFitRegionStart units="pts">1.0</connjur:initialFitRegionStart>
+          <connjur:initialFitRegionEnd units="pts">512.0</connjur:initialFitRegionEnd>
+          <connjur:order units="coefficients   ">4</connjur:order>
+          <connjur:nodeListArray units="pts">null</connjur:nodeListArray>
+          <connjur:nodeWidth units="points">1</connjur:nodeWidth>
+          <connjur:noiseAnalysisWindowLength units="points">8</connjur:noiseAnalysisWindowLength>
+          <connjur:minimumFractionOfDataWhichIsBaseline>0.33</connjur:minimumFractionOfDataWhichIsBaseline>
+          <connjur:noiseAdjustmentFactor>1.5</connjur:noiseAdjustmentFactor>
+          <connjur:rmsNoiseValue>0.0</connjur:rmsNoiseValue>
+          <connjur:dimension>2</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_014</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_015</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -verb -di</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:55 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:dimension>2</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_015</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:agent>
+    <premis:agentIdentifier>
+      <premis:agentIdentifierType>local</premis:agentIdentifierType>
+      <premis:agentIdentifierValue>NMRPipe</premis:agentIdentifierValue>
+    </premis:agentIdentifier>
+    <premis:agentName>NMRPipe</premis:agentName>
+    <premis:agentType>software</premis:agentType>
+    <premis:agentNote>9.2</premis:agentNote>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_002</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_003</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_004</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_005</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_006</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_007</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_008</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_009</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_010</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_011</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_012</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_013</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_014</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_015</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+  </premis:agent>
+  <premis:agent>
+    <premis:agentIdentifier>
+      <premis:agentIdentifierType>local</premis:agentIdentifierType>
+      <premis:agentIdentifierValue>CONNJUR spectrum translator</premis:agentIdentifierValue>
+    </premis:agentIdentifier>
+    <premis:agentName>CONNJUR spectrum translator</premis:agentName>
+    <premis:agentType>software</premis:agentType>
+    <premis:agentNote>untagged version</premis:agentNote>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_000</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_001</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+  </premis:agent>
+</premis:premis>

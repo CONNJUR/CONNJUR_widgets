@@ -1,0 +1,38 @@
+# Generic NMR README file: version 0.0 (MRG June, 2000)
+#   Version 0.0 has been input manually after the experiment 
+#   was collected and saved.
+#   Field Strength and Phase information available through procpar.prl
+
+
+Purpose of Experiment:  Test HSQC of triple labeled 22k sample.  When first
+			created sample there was doubt as to whether all the
+			amides would be exchanged into H2O.  This HSQC is one
+			of the first taken.
+
+Note:  
+
+Additional Files:  
+
+Gradsort: y
+
+Special Referencing Information: None
+
+Psgfile: gNhsqc.c  (Seqfil stored ex post facto.) 
+
+Sample Conditions:  
+
+   Sample Concentration: 930 uM 22K (rBpol CTD)
+   Uniform labelling: 2H, 13C, 15N
+   Fractional labelling: 90%HN/10%DN
+   Selective labelling: 1H, 13C for methyls of I,L,V
+   Solvent: 90%H2O/10%D2O
+   Salt: 135 mM NaCl, 46 mM PO4
+   pH: 6.8
+   Additives: 0.002% NaN3, 1 mM DTT, 100 uM AEBSF
+   Temperature: 25C
+   Pressure: atmospheric
+   Volume: ~300 ul
+   Date originally purified: 3/18/00
+   Notes: Sample started looking cloudy on 6/02/2000
+
+

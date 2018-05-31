@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd" current="TRUE">
+          <!--Varian import-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_000</connjur:spectrumIdentifier>
+          <connjur:spectralFormat>
+            <connjur:formatName>varian</connjur:formatName>
+            <connjur:formatSpecification>https://www.agilent.com/cs/library/usermanuals/public/0199937900a.pdf</connjur:formatSpecification>
+            <connjur:formatByteOrder>Big Endian</connjur:formatByteOrder>
+            <connjur:formatNumericType>Integer 4 byte</connjur:formatNumericType>
+          </connjur:spectralFormat>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sign>+</connjur:sign>
+            <connjur:negateImaginaries>true</connjur:negateImaginaries>
+            <connjur:sourceChannel defaultSetting="false">1</connjur:sourceChannel>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:spectralFrequency>600</connjur:spectralFrequency>
+            <connjur:referencePeakPosition>5000</connjur:referencePeakPosition>
+            <connjur:referencePeakFrequency>2795</connjur:referencePeakFrequency>
+            <connjur:domain>time</connjur:domain>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:firstScalePoint>-2205</connjur:firstScalePoint>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sign>+</connjur:sign>
+            <connjur:negateImaginaries>true</connjur:negateImaginaries>
+            <connjur:sourceChannel defaultSetting="false">2</connjur:sourceChannel>
+            <connjur:sweepwidth units="Hz">3000</connjur:sweepwidth>
+            <connjur:spectralFrequency>151</connjur:spectralFrequency>
+            <connjur:referencePeakPosition>5016</connjur:referencePeakPosition>
+            <connjur:referencePeakFrequency>2795</connjur:referencePeakFrequency>
+            <connjur:domain>time</connjur:domain>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:constantPhase>001</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:firstScalePoint>-2220</connjur:firstScalePoint>
+          </connjur:spectralAxis>
+        </connjur:spectrum>

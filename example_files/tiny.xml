@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd" current="TRUE">
+          <!--Varian import-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_000</connjur:spectrumIdentifier>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:firstScalePoint>-2220</connjur:firstScalePoint>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
