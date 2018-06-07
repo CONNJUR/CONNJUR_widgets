@@ -65,23 +65,24 @@ typedef struct _ReqVarianPar {
     int arraydim;
     char arrayedParam[32];
     float at;
+    float gain;
     int arrayelemts;
     int transients;
     float rof1, rof2;
     char seqfil[32];
     char solvent[16];
-    float temp;
+    float temperature;
     float parVersion;
     float freq[5];                      // arbitrary allow up to 5 channels
     char channelName[5][8];
     float offset[5];
-    float sweepWidth[5];
     float linearPhase[4];               // arbitrary allow up to 4 dimensions
     float constantPhase[4];
     int points[4];
+    float sweepWidth[4];
 } ReqVarianPar;
 
-struct _VarianPar *ptr_VarianPar;
+struct _ReqVarianPar *ptr_ReqVarianPar;
 
 typedef struct _SpecParm {
 	char ID[32];
