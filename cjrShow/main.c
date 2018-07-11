@@ -9,6 +9,10 @@
 /* 
  * File:   main.c
  * Author: mgryk
+ * 
+ * This program is for testing / illustrating GTK for widget design.
+ * It imports a custom file-format and displays the contents along with a picture.
+ * Later abandoned this approach for a "glade" design.
  *
  * Created on May 31, 2018, 3:59 PM
  */
@@ -88,9 +92,9 @@ int main(int argc, char** argv) {
 	gtk_container_set_border_width(GTK_CONTAINER(window), 15);
 
 	if (dim == 2) 
-	{ pixBuf = gdk_pixbuf_new_from_file("/home/nmrbox/mgryk/widgets/images/nhsqc.png", &error); }
+	{ pixBuf = gdk_pixbuf_new_from_file("/home/nmrbox/mgryk/CONNJUR_spike/images/nhsqc.png", &error); }
 	else	
-	{ pixBuf = gdk_pixbuf_new_from_file("/home/nmrbox/mgryk/widgets/images/cbcanh.png", &error); }
+	{ pixBuf = gdk_pixbuf_new_from_file("/home/nmrbox/mgryk/CONNJUR_spike/images/hnco.png", &error); }
 
    	if (!pixBuf) {
        
@@ -99,7 +103,7 @@ int main(int argc, char** argv) {
    	}
 
 	pixScaleBuf = gdk_pixbuf_copy(pixBuf);
-	pixScaleBuf = gdk_pixbuf_scale_simple(pixBuf, 300, 240, GDK_INTERP_BILINEAR);
+	pixScaleBuf = gdk_pixbuf_scale_simple(pixBuf, 300, 180, GDK_INTERP_BILINEAR);
 	pulseImage = gtk_image_new_from_pixbuf(pixScaleBuf);
 
 	vbox = gtk_vbox_new(FALSE, 1);
