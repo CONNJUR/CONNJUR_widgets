@@ -42,18 +42,18 @@ int main(int argc, char** argv) {
 		return(1);
 	}
 
-    window = GTK_WIDGET(gtk_builder_get_object(builder, "window1"));
+    window = GTK_WIDGET(gtk_builder_get_object(builder, "procparWindow"));
 
     gtk_builder_connect_signals(builder, NULL);
     
     GtkListStore *procparStore;
     GtkTreeView *procparView;
     
-    procparView = GTK_TREE_VIEW(gtk_builder_get_object(builder,"treeview1"));
+    procparView = GTK_TREE_VIEW(gtk_builder_get_object(builder,"procparTreeView"));
     procparStore = parseProcpar(argv[1]);
     gtk_tree_view_set_model(procparView,GTK_TREE_MODEL(procparStore));
     gtk_tree_view_set_enable_search(procparView,TRUE);
-    gtk_tree_view_set_search_entry(procparView,GTK_ENTRY(gtk_builder_get_object(builder,"searchentry1")));
+    gtk_tree_view_set_search_entry(procparView,GTK_ENTRY(gtk_builder_get_object(builder,"procparSearchEntry")));
     
     g_object_unref(G_OBJECT(builder));
 
