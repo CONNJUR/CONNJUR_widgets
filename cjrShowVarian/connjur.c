@@ -383,6 +383,23 @@ void buildMappingWindow(GtkBuilder *builder, ReqVarianPar varPar)
     gtk_combo_box_text_append(myTextCombo1,varPar.channelName[3],tempString);
     gtk_combo_box_text_append(myTextCombo2,varPar.channelName[3],tempString); 
     gtk_combo_box_set_active_id(GTK_COMBO_BOX(myTextCombo0),varPar.channelName[0]);  //sets top combo box to 1H
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb0_0")), varPar.channelName[0]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb0_1")), varPar.channelName[1]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb0_2")), varPar.channelName[2]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb0_3")), varPar.channelName[3]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb1_0")), varPar.channelName[0]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb1_1")), varPar.channelName[1]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb1_2")), varPar.channelName[2]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb1_3")), varPar.channelName[3]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb2_0")), varPar.channelName[0]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb2_1")), varPar.channelName[1]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb2_2")), varPar.channelName[2]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb2_3")), varPar.channelName[3]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb3_0")), varPar.channelName[0]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb3_1")), varPar.channelName[1]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb3_2")), varPar.channelName[2]);
+    gtk_button_set_label(GTK_BUTTON(gtk_builder_get_object(builder,"cb3_3")), varPar.channelName[3]);
+    gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(gtk_builder_get_object(builder,"cb0_0")), varPar.channelName[0]); //checks tn
     // Build Experimental Description String
     memset(expString, '\0', sizeof(expString));
     if (!varPar.sampling) strcat(expString, "non-");
@@ -397,6 +414,15 @@ void buildMappingWindow(GtkBuilder *builder, ReqVarianPar varPar)
     strcat(expString, tempString);
     
     gtk_label_set_text(GTK_LABEL(gtk_builder_get_object(builder,"expLabel")), expString);
+    
+    if (varPar.psDims > varPar.dataDims) {
+        gtk_grid_remove_column(axisGrid,2);
+    } else {
+        gtk_grid_remove_column(axisGrid,6);
+        gtk_grid_remove_column(axisGrid,5);
+        gtk_grid_remove_column(axisGrid,4);
+        gtk_grid_remove_column(axisGrid,3);
+    }
 }
 
 gboolean draw_circle (cairo_t *cr, char *text, int x, int y, int r, GdkRGBA color)
