@@ -15,10 +15,11 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/cnhsqc.xml</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/2D.cjrx</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/log</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/procpar</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/hnco.fid</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/procpar</runcommand>
+        <runcommand>"${OUTPUT_PATH}" ../example_files/hnco.fid</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>

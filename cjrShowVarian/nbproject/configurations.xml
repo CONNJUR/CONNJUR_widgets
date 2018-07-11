@@ -26,7 +26,7 @@
                    projectFiles="false"
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
-      <itemPath>procpar.glade</itemPath>
+      <itemPath>varian.glade</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -45,6 +45,7 @@
           <linkerLibItems>
             <linkerOptionItem>`pkg-config --libs libxml-2.0`</linkerOptionItem>
             <linkerOptionItem>`pkg-config --libs gtk+-3.0`</linkerOptionItem>
+            <linkerLibStdlibItem>Mathematics</linkerLibStdlibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>

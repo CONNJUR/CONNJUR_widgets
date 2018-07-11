@@ -53,15 +53,15 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=`pkg-config --libs libxml-2.0` `pkg-config --libs gtk+-3.0`  
+LDLIBSOPTIONS=`pkg-config --libs libxml-2.0` `pkg-config --libs gtk+-3.0` -lm   
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowprocpar
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowvarian
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowprocpar: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowvarian: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowprocpar ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowvarian ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/connjur.o: connjur.c
 	${MKDIR} -p ${OBJECTDIR}

@@ -18,8 +18,8 @@
 
 #ifdef __cplusplus
 extern "C" {
-#endif
-
+#endif    
+    
 typedef enum {
 	CJR_VARIAN	= 0,
 	CJR_BRUKER	= 1
@@ -61,6 +61,13 @@ typedef struct _VarianPar {
 struct _VarianPar *ptr_VarianPar;
 
 typedef struct _ReqVarianPar {
+    int fidSize;
+    int sampling;   //0 is non-uniform, 1 is uniform
+    int TROSY;  // 0 is not TROSY, 1 is TROSY
+    int dataDims;
+    int arrayDims;
+    int psDims;
+    int dimensions;
     char date[16];
     int arraydim;
     char arrayedParam[32];
@@ -92,11 +99,59 @@ typedef struct _SpecParm {
 
 struct _SpecParm *ptr_SpecParm;
 
+typedef struct _AtomColor {
+        int hni;
+        int ni;
+        int cai;
+        int hai;
+        int coi;
+        int cbi;
+        int hb2i;
+        int hb3i;
+        int cgi;
+        int hg2i;
+        int hg3i;
+        int cop;
+        int np;
+        int cap;
+        int hap;
+        int cbp;
+        int hb2p;
+        int hb3p;
+        int cgp;
+        int hg2p;
+        int hg3p;
+} AtomColor;
+
 int oldParseProcpar(char *filename, struct _ReqVarianPar *varPar, GtkListStore **list);
 
 GtkListStore *parseProcpar(char *filename);
 
+ReqVarianPar extractVarPar(GtkListStore *VarianList);
+
 char *concatStrings(char *string1, char *string2);
+
+gboolean backbone_callback (GtkWidget *widget, cairo_t *cr, gpointer data);
+
+void buildLogWindow(GtkBuilder *builder, char *logpath);
+
+int getFidSize(char *fidpath);
+
+int buildSamplingWindow(GtkBuilder *builder, char *path);
+
+void guessDataDims(struct _ReqVarianPar *varPar);
+
+void guessPSDims(struct _ReqVarianPar *varPar);
+
+void guessArrayDims(struct _ReqVarianPar *varPar);
+
+void setMaxDimensions(struct _ReqVarianPar *varPar);
+
+void buildMappingWindow(GtkBuilder *builder, ReqVarianPar varPar);
+
+void getColors(GdkRGBA **colorArray, char *pulseSequence);
+
+AtomColor getAtomColors(char *pulseSequence);
 
 #ifdef __cplusplus
 }

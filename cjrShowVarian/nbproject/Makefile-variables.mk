@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux
-CND_ARTIFACT_NAME_Debug=cjrshowprocpar
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/cjrshowprocpar
+CND_ARTIFACT_NAME_Debug=cjrshowvarian
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux/cjrshowvarian
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux/package
-CND_PACKAGE_NAME_Debug=cjrshowprocpar.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/cjrshowprocpar.tar
+CND_PACKAGE_NAME_Debug=cjrshowvarian.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux/package/cjrshowvarian.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux
-CND_ARTIFACT_NAME_Release=cjrshowprocpar
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/cjrshowprocpar
+CND_ARTIFACT_NAME_Release=cjrshowvarian
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux/cjrshowvarian
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux/package
-CND_PACKAGE_NAME_Release=cjrshowprocpar.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/cjrshowprocpar.tar
+CND_PACKAGE_NAME_Release=cjrshowvarian.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux/package/cjrshowvarian.tar
 #
 # include compiler specific variables
 #
