@@ -37,11 +37,12 @@ GdkPixbuf *create_pixbuf(const gchar * filename) {
    return pixbuf;
 }
 
-void GetVarianContent(char *dir_name, gchar ***log, gchar ***text, gchar ***procpar){
+void GetVarianContent(char *dir_name, gchar ***log, gchar ***text, gchar ***procpar, int *fid_size){
     
     char *procpar_path = (char *)malloc(strlen(dir_name)+16);
     char *log_path = (char *)malloc(strlen(dir_name)+16);
     char *text_path = (char *)malloc(strlen(dir_name)+16);
+    char *fid_path = (char *)malloc(strlen(dir_name)+16);
     GError **err;
     struct stat varFile;
     
@@ -55,6 +56,9 @@ void GetVarianContent(char *dir_name, gchar ***log, gchar ***text, gchar ***proc
     sprintf(text_path, "%s/text", dir_name);
     stat(text_path, &varFile);
     *text = (gchar **)malloc(varFile.st_size); 
+    sprintf(fid_path, "%s/fid", dir_name);
+    if (stat(fid_path, &varFile) != 0) *fid_size=0; else *fid_size=varFile.st_size;
+    printf("Fid %d\n", *fid_size);
   
     if (*procpar == NULL) { printf("Malloc failed\n"); exit(2); } //should print this to stderr
     if (*log == NULL) { printf("Malloc failed\n"); exit(2); } 
@@ -67,12 +71,12 @@ void GetVarianContent(char *dir_name, gchar ***log, gchar ***text, gchar ***proc
     return;
 }
 
-int ParseProcpar(char *filename, struct _ReqVarianPar *varPar){
+int ParseProcpar(char *filename, struct _ReqVarianPar *varPar, GtkListStore **list){
     FILE *procpar;
     int filesize;
     VarianPar parArray[600];    // Hardcode max number of parameters!!!
     int i=0, j;
-    char junk[100]; // Data designed to be discarded
+    char junk[10000]; // Data designed to be discarded
     char c1, c2;
     
     procpar = fopen(filename, "r");
@@ -100,8 +104,8 @@ int ParseProcpar(char *filename, struct _ReqVarianPar *varPar){
             for (j=0; j<parArray[i].number_of_values; j++) fscanf(procpar, "%s", parArray[i].value);
         } else {
             for (j=0; j<parArray[i].number_of_values; j++) {
-                fscanf(procpar, "%[ ]", junk);
-                c1 = fgetc(procpar);            // This kludge is to handle ""
+                fscanf(procpar, "%[\n ]", junk);  //This line skips spaces and newlines
+                c1 = fgetc(procpar);            // This kludge is to handle consecutive double quotes.
                 c2 = fgetc(procpar);
                 if (c2 != '"') {
                     fseek(procpar,-1,SEEK_CUR);
@@ -119,21 +123,22 @@ int ParseProcpar(char *filename, struct _ReqVarianPar *varPar){
                     fscanf(procpar, "%[^\"]\"", junk);
                 }
             }
+        if ((strcmp(parArray[i].name,"ap")!=0) && (strncmp(parArray[i].name,"dg",2)!=0) ) gtk_list_store_insert_with_values(*list, NULL, -1, 0, parArray[i].name, 1, parArray[i].value, -1);
         /* Alternate ways of copying string from one structure to another
         if (strcmp(parArray[i].name,"seqfil")==0) sprintf(varPar->seqfil,"%s",parArray[i].value);
         if (strcmp(parArray[i].name,"seqfil")==0) strcpy(varPar->seqfil,parArray[i].value); 
         */
-        if (strcmp(parArray[i].name,"date")==0) sscanf(parArray[i].value, "%s", varPar->date);
+        if (strcmp(parArray[i].name,"date")==0) strcpy(varPar->date,parArray[i].value); 
         if (strcmp(parArray[i].name,"arraydim")==0) sscanf(parArray[i].value, "%d", &varPar->arraydim);
-        if (strcmp(parArray[i].name,"array")==0) sscanf(parArray[i].value, "%s", varPar->arrayedParam);
+        if (strcmp(parArray[i].name,"array")==0) strcpy(varPar->arrayedParam,parArray[i].value); 
         if (strcmp(parArray[i].name,"at")==0) sscanf(parArray[i].value, "%f", &varPar->at);
         if (strcmp(parArray[i].name,"gain")==0) sscanf(parArray[i].value, "%f", &varPar->gain);
         if (strcmp(parArray[i].name,"arrayelemts")==0) sscanf(parArray[i].value, "%d", &varPar->arrayelemts);
         if (strcmp(parArray[i].name,"nt")==0) sscanf(parArray[i].value, "%d", &varPar->transients);
         if (strcmp(parArray[i].name,"rof1")==0) sscanf(parArray[i].value, "%f", &varPar->rof1);
         if (strcmp(parArray[i].name,"rof2")==0) sscanf(parArray[i].value, "%f", &varPar->rof2);
-        if (strcmp(parArray[i].name,"seqfil")==0) sscanf(parArray[i].value, "%s", varPar->seqfil);
-        if (strcmp(parArray[i].name,"solvent")==0) sscanf(parArray[i].value, "%s", varPar->solvent);
+        if (strcmp(parArray[i].name,"seqfil")==0) strcpy(varPar->seqfil,parArray[i].value); 
+        if (strcmp(parArray[i].name,"solvent")==0) strcpy(varPar->solvent,parArray[i].value); 
         if (strcmp(parArray[i].name,"temp")==0) sscanf(parArray[i].value, "%f", &varPar->temperature);
         if (strcmp(parArray[i].name,"parVersion")==0) sscanf(parArray[i].value, "%f", &varPar->parVersion);
         // channel information
@@ -173,7 +178,8 @@ int ParseProcpar(char *filename, struct _ReqVarianPar *varPar){
     return i;
 }
 
-void BuildWindow(GtkWidget *window, ReqVarianPar varPar, char **log_string, char **text_string, char **procpar_string){
+void BuildWindow(GtkWidget *window, ReqVarianPar varPar, char **log_string, 
+                char **text_string, char **procpar_string, GtkListStore *procparList, int fid_size){
     
     GtkWidget *vbox_1;		// VBox is a vertical box for text and close button
     GtkWidget *close_button;
@@ -181,14 +187,27 @@ void BuildWindow(GtkWidget *window, ReqVarianPar varPar, char **log_string, char
     GtkWidget *label2;
     GtkWidget *notebook;
     GtkWidget *log_content = gtk_label_new(*log_string);
-    GtkWidget *log_label = gtk_label_new("LOG");
-    GtkWidget *text_label = gtk_label_new("TEXT");
-    GtkWidget *procpar_label = gtk_label_new("PROCPAR");
+    GtkWidget *log_label = gtk_label_new("log");
+    GtkWidget *text_label = gtk_label_new("procpar");
+    GtkWidget *procpar_label = gtk_label_new("procpar_native");
     GtkWidget *text_content = gtk_label_new(*text_string);
     GtkWidget *procpar_content = gtk_label_new(*procpar_string);
+    GtkWidget *general_label = gtk_label_new("General");
+    char fid_file_size[100];
+    sprintf(fid_file_size, "Fid Size: %d Bytes", fid_size);
+    GtkWidget *general_content = gtk_label_new(fid_file_size);
     GtkWidget *procpar_view;
     GtkTextBuffer *procpar_buffer;
     GtkWidget *scrolled = gtk_scrolled_window_new(NULL, NULL);
+    GtkWidget *scrolled2 = gtk_scrolled_window_new(NULL, NULL);
+    GtkWidget *scrolled3 = gtk_scrolled_window_new(NULL, NULL);
+    
+    GtkWidget *draw_label = gtk_label_new("DRAW");
+    GtkWidget *drawing_area;
+    
+    GtkListStore        *myList;
+    GtkWidget           *myListView;
+    GtkTreeViewColumn   *column;
     
     // Close Button widget.  Stock icon, quit on click.
     close_button = gtk_button_new_from_icon_name("window-close",GTK_ICON_SIZE_BUTTON);
@@ -201,18 +220,42 @@ void BuildWindow(GtkWidget *window, ReqVarianPar varPar, char **log_string, char
     procpar_buffer = gtk_text_view_get_buffer(GTK_TEXT_VIEW(procpar_view));
     gtk_text_buffer_set_text(procpar_buffer, *procpar_string, -1);
     gtk_container_add(GTK_CONTAINER(scrolled), procpar_view);
+    gtk_container_add(GTK_CONTAINER(scrolled3), log_content);
 
     vbox_1 = gtk_box_new(GTK_ORIENTATION_VERTICAL, 1);
     hbox_2 = gtk_box_new(GTK_ORIENTATION_HORIZONTAL, 1);
         gtk_widget_set_halign(hbox_2, GTK_ALIGN_END);
         gtk_widget_set_valign(hbox_2, GTK_ALIGN_END);
     gtk_container_add(GTK_CONTAINER(hbox_2), close_button);
+    
+    myList = gtk_list_store_new(2, G_TYPE_STRING, G_TYPE_STRING);
+
+ /*   int i;
+    for (i=0; i<10; i++) {
+    gtk_list_store_insert_with_values(myList, NULL, -1, 0, "Pulse Sequence", 1, varPar.seqfil, -1);
+    gtk_list_store_insert_with_values(myList, NULL, -1, 0, "Date", 1, varPar.date, -1);
+    gtk_list_store_insert_with_values(myList, NULL, -1, 0, "Solvent", 1, varPar.solvent, -1);
+    gtk_list_store_insert_with_values(myList, NULL, -1, 0, "Channel 1", 1, varPar.channelName[0], -1);
+    } */
+
+    myListView = gtk_tree_view_new_with_model(GTK_TREE_MODEL(procparList));
+    g_object_unref(myList);
+    g_object_unref(procparList);
+    
+    column = gtk_tree_view_column_new_with_attributes("Parameter", gtk_cell_renderer_text_new(), "text", 0, NULL);
+    gtk_tree_view_append_column(GTK_TREE_VIEW(myListView), column);
+    column = gtk_tree_view_column_new_with_attributes("Value", gtk_cell_renderer_text_new(), "text", 1, NULL);
+    gtk_tree_view_append_column(GTK_TREE_VIEW(myListView), column);
+    gtk_container_add(GTK_CONTAINER(scrolled2), myListView);
+    
   
     notebook = gtk_notebook_new ();
     gtk_notebook_set_tab_pos (GTK_NOTEBOOK(notebook), GTK_POS_TOP);
-    gtk_notebook_insert_page (GTK_NOTEBOOK(notebook), scrolled, procpar_label, 0);
-    gtk_notebook_append_page (GTK_NOTEBOOK(notebook), log_content, log_label);
-    gtk_notebook_append_page (GTK_NOTEBOOK(notebook), text_content, text_label);
+    gtk_notebook_insert_page (GTK_NOTEBOOK(notebook), general_content, general_label, 0);
+    gtk_notebook_append_page (GTK_NOTEBOOK(notebook), scrolled2, text_label);
+    gtk_notebook_append_page (GTK_NOTEBOOK(notebook), scrolled3, log_label);
+    gtk_notebook_append_page (GTK_NOTEBOOK(notebook), scrolled, procpar_label);
+ //   gtk_notebook_append_page (GTK_NOTEBOOK(notebook), drawing_area, draw_label);
     
     gtk_box_pack_start(GTK_BOX(vbox_1), notebook, TRUE, TRUE, 10);
     gtk_box_pack_start(GTK_BOX(vbox_1), hbox_2, FALSE, FALSE, 0); 
@@ -233,11 +276,12 @@ int main(int argc, char** argv) {
 	int maxDimensions = 4;
 	int maxRecords = 8;
 	int maxCellLength = 32;
-	int windowWidth = 400, windowLength = 600;
+	int windowWidth = 800, windowLength = 600;
 	char records[maxRecords][maxDimensions][maxCellLength];  //array of strings for metadata table
         char *procpar_path = (char *)malloc(strlen(argv[1])+8);  //** Need to check into extra / for directory???
         char *text_path = (char *)malloc(strlen(argv[1])+5);
         char *log_path = (char *)malloc(strlen(argv[1])+4);
+        int fid_size;
         VarianPar myPar[500];
         int numberOfPars;
         ReqVarianPar reqPar;
@@ -245,6 +289,7 @@ int main(int argc, char** argv) {
         int a=100, b=200;
         
         GtkWidget *window;		// GtkWidget class for "window" object
+        GtkListStore *procparList = gtk_list_store_new(2, G_TYPE_STRING, G_TYPE_STRING);
 
         gchar **procpar_content, **text_content, **log_content;
         GError **err;
@@ -277,15 +322,16 @@ int main(int argc, char** argv) {
 	gtk_window_set_default_size(GTK_WINDOW(window), windowWidth, windowLength);
 	gtk_container_set_border_width(GTK_CONTAINER(window), 15);
         
-        numberOfPars = ParseProcpar(procpar_path, ptr_ReqVarianPar);
+        numberOfPars = ParseProcpar(procpar_path, ptr_ReqVarianPar, &procparList);
         printf("SEQFIL: %s\n", reqPar.seqfil);
         printf("freq[0]: %.0f\n", reqPar.freq[0]);
         printf("Total Pars in procpar: %d\n", numberOfPars);
         
         
-        GetVarianContent(argv[1], &log_content, &text_content, &procpar_content);
+        GetVarianContent(argv[1], &log_content, &text_content, &procpar_content, &fid_size);
    //     printf("Out of function: %s\n", *text_content);
-        BuildWindow(window, reqPar, log_content, text_content, procpar_content);
+        printf("Fid size %d\n", fid_size);
+        BuildWindow(window, reqPar, log_content, text_content, procpar_content, procparList, fid_size);
 
 	gtk_widget_show_all(window);				//must explicitly show window
 
