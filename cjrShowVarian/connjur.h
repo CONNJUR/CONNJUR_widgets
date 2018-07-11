@@ -133,6 +133,8 @@ char *concatStrings(char *string1, char *string2);
 
 gboolean backbone_callback (GtkWidget *widget, cairo_t *cr, gpointer data);
 
+void nbx_button_clicked (GtkWidget *widget, gpointer data);
+
 void buildLogWindow(GtkBuilder *builder, char *logpath);
 
 int getFidSize(char *fidpath);

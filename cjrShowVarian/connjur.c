@@ -643,3 +643,40 @@ gboolean backbone_callback (GtkWidget *widget, cairo_t *cr, gpointer data)
     draw_circle(cr,concatStrings(hg2i.element, hg2i.type), hg2i.x_coord, hg2i.y_coord, h_atom_rad, Color[myColor->hg2i]);
     draw_circle(cr,concatStrings(hg3i.element, hg3i.type), hg3i.x_coord, hg3i.y_coord, h_atom_rad, Color[myColor->hg3i]);
 }
+
+void nbx_button_clicked (GtkWidget *widget, gpointer data)
+{
+    /* Code from GTK documentation: https://developer.gnome.org/gtk3/stable/GfkFileChooserDialog.html  */
+    GtkWidget *dialog;
+    GtkFileChooser *chooser;
+    GtkFileChooserAction action = GTK_FILE_CHOOSER_ACTION_SAVE;
+    int res;
+    
+    dialog = gtk_file_chooser_dialog_new ("Save .nbx file", GTK_WINDOW(gtk_widget_get_toplevel (widget)), 
+            action, "_Cancel", GTK_RESPONSE_CANCEL, "_Save", GTK_RESPONSE_ACCEPT, NULL);
+    chooser = GTK_FILE_CHOOSER (dialog);
+    gtk_file_chooser_set_do_overwrite_confirmation (chooser, TRUE);
+    
+    res = gtk_dialog_run (GTK_DIALOG (dialog));
+    
+    if (res == GTK_RESPONSE_ACCEPT)
+    {
+        char *output;
+        char command[128];
+        char cst_command[256];
+        
+        output = gtk_file_chooser_get_filename (chooser);
+        // Do something here
+        sprintf(cst_command, "/usr/software/bin/spectrum-translator -st varian -dt nbx -sd %s -df %s", data, output);
+        GtkWidget *spinner = gtk_spinner_new();
+        gtk_spinner_start(spinner);
+        printf("%s\n", cst_command);
+        system(cst_command);
+        gtk_spinner_stop(spinner);
+        g_free (output);
+        gtk_widget_destroy(spinner);
+    }
+    
+    gtk_widget_destroy (dialog);
+    gtk_main_quit();
+}
