@@ -1,0 +1,61 @@
+
+Non-Uniform Sampling (NUS) in NMRPipe:
+2D Magnitude-Mode Data
+
+   Frank Delaglio
+   Institute for Bioscience and Biotechnology Research
+   frank.delaglio@nist.gov
+
+   December 1 2015
+
+   Directory: demo/nus/varian_nus/mag
+
+The NMRPipe conversion tools will often not be able to recognize 
+Magnitude-Mode data directly. As a result, conversion schemes
+for Magntude-mode data have to be adjusted by hand. Also, processing 
+schemes different from the usual phase-sensitive ones are needed.
+
+* For conventional 2D Magnitude-mode data:
+
+ Conversion: -aq2D  Magnitude
+             -yMODE Real
+             -yT    will be the number of increments.
+             -yN    will be the same as -yT
+
+ Processing: basicFT2Mag.com
+
+             In a Magnitude-mode processing scheme, the imaginary data
+             is not deleted after the first Fourier transform, no phase
+             corrections are applied, and the "MC" Magnitude Calculation 
+             function is used after the second Fourier transform.
+
+* For NUS Magntude-mode data:
+
+ Conversion: -aq2D  Magnitude
+             -yMODE Real
+             -yN    will be the number of samples in the NUS schedule. 
+             -yT    will be based on the largest value in the NUS schedule. 
+
+ NUS Expansion:
+
+ For 2D Magntude-Mode NUS, convert the time-domain data before expanding:
+
+   var2pipe -in ./fid \
+    -ndim 2 -nusDim 2 -noaswap  \
+     -xN              1150  -yN               256  \
+     -xT               575  -yT               511  \
+     -xMODE        Complex  -yMODE           Real  \
+     -xSW         3834.356  -ySW         3834.356  \
+     -xOBS         399.758  -yOBS         399.758  \
+     -xCAR           4.773  -yCAR           4.773  \
+     -xLAB             H1x  -yLAB             H1y  \
+     -aq2D       Magnitude  \
+     -out ./nus.fid -verb -ov
+
+   nusExpand.tcl  -in nus.fid -out test.fid -sample sampling.sch -sampleCount Auto
+   nusExpand.tcl  -in nus.fid -out mask.fid -sample sampling.sch -sampleCount Auto -mask
+
+
+ Processing: ist2DMag.com
+
+      

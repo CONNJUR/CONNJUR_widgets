@@ -1,0 +1,1483 @@
+maxpen 7 1 32767 0 1 0 1 0 1 64
+1 1 
+0 
+cla 7 1 4096 0 1 5 1 0 1 64
+4 1 4 2 3 
+0 
+RFCOIL 2 2 8 0 0 2 1 0 1 64
+1 "main"
+0 
+PRnexp 7 1 32767 0 0 2 1 0 1 64
+1 3 
+0 
+BPpwrlimits 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 1 
+0 
+BPdpwr3max 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 40 
+0 
+BP2Dplot 7 1 32767 0 0 2 1 0 1 64
+1 0 
+0 
+B 1 1 10000000000 -10000000000 0 5 1 1 1 64
+1 700 
+0 
+A 1 1 10000000000 -10000000000 0 5 1 1 1 64
+1 500 
+0 
+BP1Hspinlock 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 7193.74 
+0 
+BPbasic 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 1 
+0 
+BPautonoisecheck 7 1 32767 0 0 2 1 0 1 64
+1 0 
+0 
+BPBioNMR 7 1 32767 0 0 2 1 0 1 64
+1 0 
+0 
+BPdeuterated 7 1 32767 0 0 2 1 0 1 64
+1 0 
+0 
+BPclassic 4 2 4 0 0 2 1 0 1 64
+1 "y"
+0 
+BPdpwr2max 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 37 
+0 
+BPdpwrspinlock 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 7000 
+0 
+BPdpwrmax 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 43 
+0 
+BPdpwr4max 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 50 
+0 
+BPplot 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+BPminpwC 6 1 13 13 13 2 1 8192 1 64
+1 12 
+0 
+BPinstall 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 1 
+0 
+BPplotdir 2 2 8 0 0 2 1 0 1 64
+1 "/home/et/vnmrsys/AutoTripRes"
+0 
+H1offset 1 1 1e+18 -1e+18 0 2 1 0 1 64
+1 0 
+0 
+CPbbx 2 2 8 0 0 2 1 0 1 64
+1 "open"
+0 
+BPtpwrmax 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 60 
+0 
+BPspinlock 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 7000 
+0 
+BPquick 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 1 
+0 
+BPsvfdir 2 2 8 0 0 2 1 0 1 64
+1 "/home/et/data/xxxz"
+0 
+BPtpwrspinlock 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 7193.74 
+0 
+FASTenv 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+FASTuser 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+PRbpa 4 2 4 0 0 2 1 256 1 64
+12 "y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+0 
+N 2 2 8 0 0 2 1 4 1 64
+1 "n"
+0 
+JAB 1 1 10000000000 -10000000000 0 5 1 1 1 64
+1 5 
+0 
+PDFpreview 4 2 4 0 0 2 1 0 1 64
+1 "y"
+0 
+PRdir 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+PRd1 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 256 1 64
+1 1 
+0 
+PRcnt 7 1 32767 0 0 2 1 0 1 64
+1 0 
+0 
+PRlp 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 0 
+0 
+PRexp 2 2 8 0 0 2 1 256 1 64
+12 "gNhsqc"
+"ghn_co"
+"ghn_ca"
+"ghn_co"
+"ghn_co"
+"ghn_co"
+"ghn_co"
+"ghn_co"
+"ghn_co"
+"ghn_co"
+"ghn_co"
+"ghn_co"
+0 
+PRn 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 1 
+0 
+PRppeaks 7 1 32767 0 0 2 1 256 1 64
+1 0 
+0 
+PRnpr 7 1 32767 0 0 2 1 256 1 64
+12 1 1 1 1 1 1 1 1 1 1 1 1 
+0 
+PRni2 7 1 32767 0 0 2 1 256 1 64
+12 0 0 0 0 0 0 0 0 0 0 0 0 
+0 
+PRni 7 1 32767 0 0 2 1 256 1 64
+12 0 0 0 0 0 0 0 0 0 0 0 0 
+0 
+PRniTilt 7 1 32767 0 0 2 1 256 1 64
+12 0 0 0 0 0 0 0 0 0 0 0 0 
+0 
+PRnpeaks 7 1 32767 0 0 2 1 256 1 64
+12 100 100 100 100 100 100 100 100 100 100 100 100 
+0 
+PRpage 7 1 32767 0 0 2 1 1 1 64
+1 1 
+0 
+PRnt 7 1 32767 0 0 2 1 256 1 64
+12 0 0 0 0 0 0 0 0 0 0 0 0 
+0 
+PRpos 4 2 4 0 0 2 1 256 1 64
+12 "y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+"y"
+0 
+PRsw1 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 256 1 64
+12 2500 2500 2500 2500 2500 2500 2500 2500 2500 2500 2500 2500 
+0 
+PRskipF2 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+PRrp 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 0 
+0 
+PRsetlim 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+PRsw 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 256 1 64
+12 12500 12500 12500 12500 12500 12500 12500 12500 12500 12500 12500 12500 
+0 
+PRsp 5 1 1000000000 -1000000000 0 2 1 0 1 64
+1 3596.96 
+0 
+PRwp 5 1 1000000000 -1000000000 0 2 1 0 1 64
+1 3596.96 
+0 
+PRthr 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 256 1 64
+12 0 0 0 0 0 0 0 0 0 0 0 0 
+0 
+PRsw2 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 256 1 64
+12 2500 2500 2500 2500 2500 2500 2500 2500 2500 2500 2500 2500 
+0 
+PRvarsw1 4 2 4 0 0 2 1 256 1 64
+12 "n"
+"n"
+"n"
+"n"
+"n"
+"n"
+"n"
+"n"
+"n"
+"n"
+"n"
+"n"
+0 
+QScustompar 2 2 8 0 0 2 1 256 1 64
+1 ""
+0 
+ProbeAttr 2 2 8 0 0 2 1 256 1 64
+8 ""
+""
+""
+"none"
+"HCN_lk_d2o"
+"/home/et/vnmrsys"
+"edit"
+"nOprObEId"
+0 
+QSexp 2 2 8 0 0 2 1 256 1 64
+9 "PROTON"
+"CARBON"
+"gCOSY"
+"HSQCAD"
+"gHMBCAD"
+"H1COSY"
+"H1COSYQC"
+"H1COSYQCBC"
+"C13DEPT"
+0 
+QSpar 2 2 8 0 0 2 1 256 1 64
+24 "samplename  "
+"bothQ"
+"PROTON"
+"1"
+""
+"samplename"
+"random"
+""
+""
+""
+""
+""
+""
+""
+""
+"fgexp"
+""
+""
+"no"
+"et"
+"et"
+"None"
+"NewStudy"
+""
+0 
+activestudy 2 2 8 0 0 3 1 0 1 64
+1 ""
+0 
+UserPrefs 2 2 8 0 0 2 1 256 1 64
+10 "concentration"
+"y"
+"notebook"
+"y"
+"emailaddr"
+"y"
+"solvent"
+"y"
+"page"
+"y"
+0 
+SpecViewPref 2 2 8 0 0 2 1 256 1 64
+2 "CPEQAF"
+""
+0 
+ScoutViewPref 2 2 8 0 0 2 1 0 1 64
+1 "no"
+0 
+SampleViewPref 2 2 8 0 0 2 1 256 1 64
+1 "error"
+0 
+SQviewOptions 2 2 8 0 0 2 1 256 1 64
+4 "Sample"
+"Spectrometer"
+"Active"
+"Cluster"
+0 
+SidesPopupPar 2 2 8 0 0 2 1 256 1 64
+1 ""
+0 
+TrayClipBoard 2 2 8 0 0 2 1 256 1 64
+1 ""
+0 
+TrayLocStatus 2 2 8 0 0 2 1 256 1 64
+1 ""
+0 
+acqmode 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+Y 2 2 8 0 0 2 1 4 1 64
+1 "y"
+0 
+acqaddr 2 2 128 0 0 2 1 4 1 64
+1 "app600b 18906 20155"
+0 
+activeid 2 2 8 0 0 2 1 0 1 64
+1 "null"
+0 
+at_CO 3 1 14 14 14 2 1 8192 1 64
+1 0.01 
+0 
+appmode 2 2 8 0 0 2 1 8 1 64
+1 "walkup"
+0 
+addsubexp 7 1 9999 1 0 4 1 1 1 64
+1 5 
+0 
+activeviewport 1 1 32767 0 0 2 1 33040 1 64
+1 2 
+0 
+adaptiveNT 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+adminemailwhen 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+adminemailflag 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+at_CA 3 1 14 14 14 2 1 8192 1 64
+1 0.007 
+0 
+arraycolors 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 32768 1 64
+1 0 
+0 
+at_CCT 3 1 14 14 14 2 1 8192 1 64
+1 0.018 
+0 
+at_CACB 3 1 14 14 14 2 1 8192 1 64
+1 0.004 
+0 
+auto 2 2 64 0 0 2 1 7 1 64
+1 "n"
+2 "n" "y" 
+at_HN 3 1 14 14 14 2 1 8192 1 64
+1 0.1 
+0 
+at_HC 3 1 14 14 14 2 1 8192 1 64
+1 0.1 
+0 
+at_Hid 3 1 14 14 14 2 1 8192 1 64
+1 0.01 
+0 
+at_N 3 1 14 14 14 2 1 8192 1 64
+1 0.015 
+0 
+automode 2 2 8 0 0 3 1 0 1 64
+1 "wait"
+0 
+autodir 2 2 256 0 0 2 1 3 1 64
+1 "/home/et/vnmrsys/Automation/auto_20130104_01"
+0 
+autodirtmplt 2 2 8 0 0 2 1 0 1 64
+1 "auto_%DATE%"
+0 
+autoraflag 4 2 4 0 0 2 1 0 1 64
+1 "y"
+0 
+autoname 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+bioref 4 2 4 0 0 2 1 0 1 64
+1 "y"
+0 
+autosave 1 1 32767 -32767 0 2 1 16 1 64
+1 1 
+0 
+buttonMode 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 1 
+0 
+dofidsave 2 2 8 0 0 0 1 0 1 64
+1 "n"
+2 "y" "n" 
+curexp 2 2 128 0 0 0 1 32768 1 64
+1 "/home/et/vnmrsys/exp2"
+0 
+copyid 2 2 8 0 0 3 1 33040 1 64
+2 "null"
+"null"
+0 
+cmdHis 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 0 
+0 
+clfreq 1 1 10000000000 -10000000000 0 5 1 0 1 64
+4 702.531006 697.531006 502.468994 497.468994 
+0 
+colorMode 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 0 
+0 
+colorName 2 2 8 0 0 3 1 65808 1 64
+51 "black"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"black"
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+""
+"0xD200FF"
+""
+"0xD2D200"
+""
+""
+""
+""
+""
+""
+""
+0 
+cpvjrev 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+cpprefs 2 2 8 0 0 2 1 256 1 64
+79 "180"
+"60"
+"nolimit"
+"random"
+""
+"none"
+"daily"
+"pdf"
+"/home/et/data/$samplename$"
+"%DATE%_"
+"$pslabel$_"
+"n"
+"n"
+"n"
+"current"
+"no"
+""
+""
+""
+""
+""
+"std"
+""
+""
+""
+"auto_%DATE%"
+"/home/et/data/BPexpress"
+"20130131_01"
+"ghn_co_ca_01.fid"
+""
+""
+""
+"/home/et/vnmrsys/Automation/auto_20130131_01"
+"0.5"
+"n"
+"no"
+"n"
+"no"
+""
+"300"
+"n"
+""
+"yes"
+"no"
+"none"
+"no"
+""
+""
+"no"
+"no"
+"no"
+"fgexp"
+"CPEQAF"
+""
+"no"
+"no"
+"no"
+"no"
+"n"
+""
+""
+"fgbgauto"
+"no"
+"n"
+"n"
+"no"
+"no"
+"24hour"
+"Continue"
+"New"
+"ppa"
+"0"
+"yes"
+"Sample Spectrometer Active Cluster"
+"true"
+"-1"
+"-1"
+"-1"
+"-1"
+0 
+cpautodir 2 2 8 0 0 2 1 0 1 64
+1 "/home/et/vnmrsys/Automation/auto_20130104_01"
+0 
+copymode 2 2 8 0 0 2 1 0 1 64
+1 "false"
+0 
+cpglobalauto 2 2 8 0 0 2 1 0 1 64
+1 "/home/et/vnmrsys/Automation"
+0 
+cpsaveglobal 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+cpstudyname 2 2 8 0 0 2 1 256 1 64
+11 ""
+""
+"0"
+""
+"no"
+"q"
+"UserStudies"
+"yes"
+"/home/et/vnmrsys"
+"Home account"
+"NeWTaBNaMe"
+0 
+crosshair 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 0 
+0 
+crmode 2 2 8 0 0 4 1 17 1 64
+1 "c"
+2 "b" "c" 
+curecc 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+dga 2 2 1024 0 0 5 1 0 1 64
+1 "1:SPIN SYSTEM:spinsys,sminf:2,smaxf:2,sth:4,slw:3,niter:0,iterate,svs:3;2:CHEM SHIFTS:A:2,B:2;3:COUPLING CONSTANTS:JAB:2;"
+0 
+department 2 2 128 0 0 2 1 32772 1 64
+1 "nmr"
+0 
+curwin 7 1 9999 0 1 4 1 33040 1 64
+3 1 1 1 
+0 
+cursqexp 2 2 8 0 0 2 1 0 1 64
+1 "/home/et/vnmrsys/studies/exp2"
+0 
+datapref 2 2 8 0 0 4 1 0 1 64
+9 "$userdir$/data"
+""
+""
+""
+"$userdir$/data"
+"$samplename$"
+"$pslabel$_%DATE%"
+""
+"y"
+0 
+dfmode 2 2 8 0 0 4 1 17 1 64
+1 "r"
+3 "r" "i" "z" 
+dla 2 2 1024 0 0 5 1 0 1 64
+1 "1:LINE ASSIGNMENTS:[sla:4:0,slfreq:12:2];3:LINES CALCULATED:[cla:4:0,clfreq:12:2];"
+0 
+displayShow 7 1 32767 0 0 2 1 0 1 64
+1 8 
+0 
+doacqdone 2 2 8 0 0 0 1 16 1 64
+1 "y"
+2 "y" "n" 
+hdwshim 2 2 8 0 0 2 1 0 1 64
+1 "n"
+3 "n" "y" "p" 
+fidarea 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 0.00201556706428 
+0 
+editprotpars 2 2 8 0 0 2 1 256 1 64
+14 "cp_pwr_test"
+"s2pul"
+"3 min, 42 sec"
+"223"
+"cp_pwr_test"
+"n"
+"CMD"
+""
+"make_Cburn_summary"
+"id1_Cburn_summary"
+""
+"/home/et/vnmrsys"
+"Home account"
+"s2pul"
+0 
+dsp 2 2 8 0 0 2 1 9 1 64
+1 "n"
+3 "i" "r" "n" 
+doprocess 2 2 8 0 0 0 1 256 1 64
+6 "n"
+"y"
+"y"
+"y"
+"y"
+"y"
+2 "y" "n" 
+doplotlogo 2 2 8 0 0 2 1 0 1 64
+1 "y"
+0 
+editparlibtab 2 2 8 0 0 2 1 256 1 64
+2 "UserExp"
+"NeWTaBNaMe"
+0 
+dxmirror 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+emailflag 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+email 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+expselnu 1 1 9.99999984307e+17 -9.99999984307e+17 0 4 1 0 1 64
+1 0 
+0 
+eventLogpar 2 2 8 0 0 2 1 256 1 64
+1 ""
+0 
+expselu 1 1 9.99999984307e+17 -9.99999984307e+17 0 4 1 0 1 64
+1 0 
+0 
+gcalang 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 0 
+0 
+force 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 0 
+0 
+fidnorm 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 0 1 64
+1 0.001 
+0 
+fidmirror 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+gcal 1 1 1 0 1e-10 2 1 0 1 64
+1 0.0012 
+0 
+fsq 2 2 8 0 0 2 1 8 1 64
+1 "n"
+2 "y" "n" 
+globalauto 2 2 8 0 0 3 1 0 1 64
+1 "/home/et/vnmrsys/studies/exp2"
+0 
+gcaly 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 1e-05 
+0 
+gcalx 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 1e-05 
+0 
+gcflg 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+gmapname 2 2 8 0 0 2 1 0 1 64
+1 "xxx"
+0 
+globalenter 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+gradientshaping 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+gradientdisable 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+gradtypeglobal 2 2 8 0 0 2 1 0 1 64
+1 "nnc"
+0 
+lastlcpeak 7 1 32767 0 0 2 1 0 1 64
+1 0 
+0 
+jviewportlabel 2 2 8 0 0 2 1 65808 1 64
+9 "ghc_co_nh"
+"gnoesyNhsqc"
+"ghn_ca"
+"4"
+"5"
+"gtocsyNhsqc"
+"best_hncoP"
+"best_hncoP"
+"9"
+0 
+iterate 2 2 256 0 0 5 1 1 1 64
+1 ""
+0 
+intstyle 2 2 8 0 0 4 1 0 1 64
+1 ""
+0 
+institute 2 2 8 0 0 3 1 0 1 64
+1 ""
+0 
+investigator 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+jcurwin 1 1 9999 0 1 2 1 272 1 64
+9 4 2 3 1 5 6 7 8 9 
+0 
+jviewport 1 1 16 0 1 2 1 33045 1 64
+1 2 
+0 
+jvpinfo 2 2 8 0 0 3 1 65808 1 64
+1 "align"
+0 
+jvpcolors 2 2 8 0 0 2 1 65808 1 64
+18 "255,51,0"
+"blue"
+"seaGreen"
+"red"
+"orange"
+"magenta"
+"goldenrod"
+"darkGreen"
+"coral"
+"blue"
+"blue"
+"blue"
+"blue"
+"blue"
+"blue"
+"blue"
+"blue"
+"blue"
+0 
+jviewports 1 1 32767 -32767 0 2 1 65808 1 64
+13 3 0 2 1 4 2 3 3 5 6 11 10 8 
+0 
+jviewportproperty 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+2 1 1 
+0 
+jvpexps 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 65808 1 64
+18 1 1 1 1 1 1 1 1 1 1 2 3 4 5 6 7 8 9 
+0 
+jvplabels 2 2 8 0 0 2 1 65808 1 64
+9 "1"
+"2"
+"3"
+"4"
+"5"
+"6"
+"7"
+"8"
+"9"
+0 
+lastclusterdir 2 2 8 0 0 2 1 256 1 64
+2 ""
+""
+0 
+lockphase 1 1 360 0 1 2 1 65552 1 64
+1 292 
+0 
+ll2dmode 4 2 4 0 0 4 1 17 1 64
+1 "yyyy"
+2 "y" "n" 
+lastmenu 2 2 8 0 0 4 1 32785 1 64
+1 ""
+0 
+lastlk 2 2 0 0 0 0 1 0 1 64
+1 "CDCl3"
+0 
+lcpeak 7 1 32767 0 0 2 1 32768 1 64
+1 0 
+0 
+liqbear 7 1 65535 0 1 2 1 0 1 64
+1 41000 
+0 
+lockgain 1 1 48 0 1 2 1 65552 1 64
+1 46 
+0 
+loc 7 1 12 12 12 2 1 8201 1 64
+1 0 
+0 
+masspeedlimit 7 1 100000 0 0 0 1 0 1 64
+1 0 
+0 
+masactivesetpoint 7 1 2 0 0 0 1 0 1 64
+1 0 
+0 
+loginBox 2 2 8 0 0 2 1 0 1 64
+1 "default"
+0 
+lockpower 1 1 68 0 1 2 1 65552 1 64
+1 45 
+0 
+mapwin 7 1 9999 0 1 4 1 33040 1 64
+16 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 
+masprofile 7 1 1 0 0 0 1 0 1 64
+1 0 
+0 
+maxattench1 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 63 
+0 
+masvt 2 2 8 0 0 2 1 0 1 64
+1 "n"
+0 
+masthinwall 2 2 0 0 0 0 1 0 1 64
+1 "thin"
+0 
+maxattench3 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 56 
+0 
+maxattench2 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 63 
+0 
+maxattench4 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 54 
+0 
+sminf 1 1 10000000000 -10000000000 0 5 1 1 1 64
+1 0 
+0 
+phasing 1 1 100 10 0 3 1 0 1 64
+1 100 
+0 
+operator 2 2 128 0 0 2 1 32772 1 64
+1 "et"
+0 
+mf_contmult 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 32768 1 64
+1 1.4 
+0 
+mfTextFontSize 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 32768 1 64
+1 14 
+0 
+mfShowFields 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 32768 1 64
+1 1 
+0 
+mfShowAxis 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 32768 1 64
+1 1 
+0 
+mfResetCursor 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 0 
+0 
+mfMexp 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 0 
+0 
+mfShowCursor 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 1 
+0 
+mfText 2 2 8 0 0 3 1 32768 1 64
+1 ""
+0 
+mfShowPlotterbox 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 0 
+0 
+mfTextColor 2 2 8 0 0 3 1 32768 1 64
+1 "slateBlue"
+0 
+mfTextStyle 2 2 8 0 0 3 1 32768 1 64
+1 "PlainText"
+0 
+mfTextLayout 2 2 8 0 0 3 1 32768 1 64
+1 "None"
+0 
+mf_color_neg 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 32768 1 64
+1 1 
+0 
+mf_b_colors 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 32768 1 64
+1 1 
+0 
+mf_color_pos 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 32768 1 64
+1 1 
+0 
+n 2 2 8 0 0 2 1 4 1 64
+1 "n"
+0 
+mlabel 2 2 0 0 0 0 1 32784 1 64
+17 "Box"
+"Show Full Spectrum"
+"Reset to Full Display"
+"Zoom in"
+"Zoom out"
+"Zoom mode"
+"Pan & Stretch Mode"
+"Trace"
+"Show/Hide Axis"
+"Projections"
+"Redraw"
+"Rotate"
+"Scale +20%"
+"Scale -20%"
+"Phase2D"
+"Peak Picking"
+"Return"
+0 
+micon 2 2 0 0 0 0 1 32784 1 64
+17 "2D2cur.gif"
+"2Dfull.gif"
+"FullScale.gif"
+"1Dexpand.gif"
+"1Dzoomout.gif"
+"ZoomMode.gif"
+"1Dspwp.gif"
+"2Dtrace.gif"
+"1Dscale.gif:on"
+"2Dvhproj.gif"
+"recycle.gif"
+"2Drotate.gif"
+"2Dvs+20.gif"
+"2Dvs-20.gif"
+"1Dphase.gif"
+"2Dpeakmainmenu.gif"
+"return.gif"
+0 
+mf_numcont 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 32768 1 64
+1 16 
+0 
+mstring 2 2 0 0 0 0 1 32784 1 64
+17 "dconi(`toggle`)"
+"mfaction('mfzoom',0)"
+"mfaction('fullzoom')"
+"mfaction('mfzoom',1)"
+"mfaction('mfzoom',-1)"
+"setButtonMode(2) menu(`dconi`)"
+"setButtonMode(3) menu(`dconi`)"
+"init_dis(`trace`) dconi(`trace`)"
+"if(mfShowAxis=1) then mfShowAxis=0 else mfShowAxis=1 endif repaint"
+"newmenu(`dconi_proj`) dconi(`restart`)"
+"dconi(`again`)"
+"if trace=`f2` then trace=`f1` else trace=`f2` endif dconi(`again`) if(overlayMode=3) then vpLayout(`overlayMode`,`align`) endif"
+"vs2d=vs2d*1.2 dconi(`again`)"
+"vs2d=vs2d/1.2 dconi(`again`)"
+"newmenu(`dconi_phase`) dconi(`trace`)"
+"newmenu(`ll2d`) dconi(`restart`)"
+"menu(`display_2D`)"
+0 
+morespin 2 2 0 0 0 0 1 0 1 64
+1 "n"
+2 "y" "n" 
+notebook 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+niter 7 1 9999 0 1 5 1 1 1 64
+1 0 
+0 
+opentray 2 2 8 0 0 2 1 256 1 64
+3 "close"
+"close"
+""
+0 
+pboxreal 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 256 1 64
+5 0 0 0 0 0 
+0 
+panellevel 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 100 
+0 
+owner 2 2 128 0 0 2 1 32772 1 64
+1 "et"
+0 
+optfiles 2 2 8 0 0 2 1 65808 1 64
+8 "global:yes"
+"conpar:yes"
+"shims:yes"
+"waveforms:yes"
+"pulseSequence:yes"
+"phasefile:no"
+"data:no"
+"cmdHistory:no"
+0 
+oprtmgr 2 2 8 0 0 2 1 256 1 64
+1 ""
+0 
+overlayMode 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 0 
+0 
+page 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+parstyle 2 2 8 0 0 4 1 0 1 64
+1 "ppa"
+0 
+papersize 2 2 8 0 0 3 1 65808 1 64
+1 "letter"
+0 
+pfgon 2 2 8 0 0 2 1 0 1 64
+1 "nny"
+0 
+pdfplotpar 2 2 8 0 0 2 1 256 1 64
+1 ""
+0 
+pboxstr 2 2 8 0 0 2 1 256 1 64
+16 "decoupling"
+"WALTZ16"
+"Pbox"
+""
+"z"
+"y"
+"pwpat"
+"tpwr"
+"tpwrf"
+"pw"
+"dmf"
+"dres"
+"a"
+"Select shape(s), click Add Waveform for each shape, then click Make It."
+"y"
+".RF"
+0 
+personaType 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+phasef 1 1 100 0.01 0 3 1 0 1 64
+1 8 
+0 
+printsaveformat 2 2 8 0 0 3 1 65808 1 64
+1 "jpg"
+0 
+plotter 2 2 0 0 0 0 1 8 1 64
+1 ""
+0 
+plotlogox 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 48 
+0 
+pldev 7 1 32767 0 1 0 1 0 1 64
+1 2 
+0 
+pkpick 2 2 8 0 0 4 1 0 1 64
+1 ""
+0 
+plotlogo 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+plotmirror 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+plotlogoy 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 15 
+0 
+plotscalex 1 1 1e+16 -1e+16 0 0 1 0 1 64
+1 1 
+0 
+plotscaley 1 1 1e+16 -1e+16 0 0 1 0 1 64
+1 1 
+0 
+printformat 2 2 8 0 0 3 1 65808 1 64
+1 "pcl"
+0 
+printer 2 2 0 0 0 0 1 65816 1 64
+1 ""
+0 
+printdpi 2 2 600 60 1 3 1 65808 1 64
+1 "300"
+0 
+printcolor 2 2 0 0 0 3 1 65808 1 64
+1 "mono"
+0 
+printfile 2 2 8 0 0 3 1 65808 1 64
+1 ""
+0 
+printregion 2 2 8 0 0 2 1 65808 1 64
+1 "graphics"
+4 "graphics" "allframes" "frames" "vnmrj" 
+printlw 2 2 12 1 1 3 1 65808 1 64
+1 "1"
+0 
+printlayout 2 2 8 0 0 2 1 65808 1 64
+1 "landscape"
+2 "landscape" "portrait" 
+printout 2 2 8 0 0 2 1 0 1 64
+1 "printer"
+0 
+printsavedpi 2 2 600 60 1 3 1 65808 1 64
+1 "150"
+0 
+printsavecolor 2 2 0 0 0 3 1 65808 1 64
+1 "color"
+0 
+reqparlist 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+pslw 7 1 100 0 0 4 1 0 1 64
+1 1 
+0 
+probe_protection 2 2 8 0 0 2 1 0 1 64
+1 "y"
+2 "n" "y" 
+printsize 2 2 8 0 0 2 1 65808 1 64
+1 "page"
+3 "page" "halfpage" "quarterpage" 
+printsend 2 2 8 0 0 2 1 65808 1 64
+1 "print"
+2 "print" "file" 
+probe 2 2 8 0 0 2 1 8 1 64
+1 "HCN"
+0 
+probeidattr 2 2 8 0 0 2 1 0 1 64
+8 "n"
+""
+""
+""
+""
+"offline"
+""
+"a"
+0 
+probeattr 2 2 8 0 0 2 1 256 1 64
+6 "user"
+"zero"
+"n"
+"b"
+"Probe"
+"user"
+0 
+psclipboard 2 2 8 0 0 2 1 33024 1 64
+7 "psstage:"
+"stage:"
+"errors:"
+"stat:0"
+"acqpause:0"
+"autoname:"
+"retValue:psDone"
+0 
+probetype 2 2 8 0 0 2 1 0 1 64
+1 "liquids"
+0 
+pshr 7 1 32767 0 0 4 1 0 1 64
+1 1 
+0 
+refstd 2 2 8 0 0 2 1 65808 1 64
+1 "Bio"
+0 
+recordSave 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 0 
+0 
+qcomp 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+reqparcheck 2 2 8 0 0 2 1 0 1 64
+1 "n"
+2 "y" "n" 
+saveglobal 2 2 8 0 0 3 1 0 1 64
+25 "probe"
+"lcpeak"
+"loc"
+"lockpower"
+"lockgain"
+"lockphase"
+"lockfreq"
+"z0"
+"lkof"
+"vloc"
+"vrack"
+"vzone"
+"vproto"
+"pkpick"
+"parstyle"
+"operator"
+"studyid"
+"systemname"
+"probetype"
+"refstd"
+"investigator"
+"notebook"
+"page"
+"study"
+"samplename_global"
+0 
+rf4pop 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 2 
+0 
+rf2pop 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 0 
+0 
+rf1pop 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 2 
+0 
+rf3pop 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 2 
+0 
+sampdirtmplt 2 2 8 0 0 2 1 0 1 64
+1 "%DATE%_"
+0 
+rf5pop 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 2 
+0 
+samplename_global 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+showprotunegui 2 2 8 0 0 2 1 1 1 64
+1 "yas"
+0 
+shimtype 2 2 8 0 0 2 1 0 1 64
+1 "Varian28"
+0 
+seqmanual 2 2 8 0 0 4 1 32768 1 64
+1 "PROTON"
+0 
+screendpi 1 1 1200 0 1 2 1 0 1 64
+1 99 
+0 
+sglduty 7 1 32767 0 0 2 1 0 1 64
+1 0 
+0 
+showPlotBox 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+2 1 8 
+0 
+sla 7 1 4096 0 1 5 1 0 1 64
+1 0 
+0 
+showrfmon 1 1 100 -100 1 2 1 256 1 64
+1 0 
+0 
+slw 1 1 1000000 0.01 0.01 5 1 1 1 64
+1 0.5 
+0 
+slfreq 1 1 10000000000 -10000000000 0 5 1 0 1 64
+1 0 
+0 
+smaxf 1 1 10000000000 -10000000000 0 5 1 1 1 64
+1 6497.726563 
+0 
+trashnodepref 2 2 8 0 0 2 1 65808 1 64
+3 "Delete"
+"Delete"
+"Delete"
+0 
+svfdate 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+sqtval 2 2 8 0 0 2 1 33040 1 64
+1 ""
+0 
+sqdir 2 2 8 0 0 2 1 0 1 64
+1 "/home/et/vnmrsys/studies/exp2/tmpstudy"
+0 
+sporra 1 1 100 0 1 2 1 256 1 64
+1 0 
+0 
+spinsys 2 2 20 0 0 5 1 0 1 64
+1 "AB"
+0 
+spinmax 7 1 90000 0 1 4 1 0 1 64
+1 39 
+0 
+spintype 2 2 0 0 0 2 1 0 1 64
+1 "liquids"
+5 "liquids" "mas" "nano" "none" "tach" 
+sqattr 2 2 8 0 0 2 1 33040 1 64
+11 "id"
+"type"
+"status"
+"lock"
+"title"
+"exp"
+"time"
+"macro"
+"data"
+"CPnode"
+"tooltext"
+0 
+spshift 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 0 
+0 
+sqname 2 2 8 0 0 2 1 0 1 64
+1 "s_%DATE%_"
+0 
+sqflag 4 2 4 0 0 2 1 0 1 64
+1 "y"
+0 
+sqdisplay 2 2 8 0 0 4 1 33040 1 64
+1 "sample"
+0 
+sqmode 2 2 8 0 0 3 1 0 1 64
+1 "pause"
+0 
+sqsaveid 2 2 8 0 0 3 1 33040 1 64
+1 "null"
+0 
+sth 1 1 1 0 0.001 5 1 1 1 64
+1 0.01 
+0 
+sqval 2 2 8 0 0 2 1 33040 1 64
+11 "Sqn0001"
+"Sqn0002"
+"Sqn0003"
+"Sqn0004"
+"Sqn0005"
+"Sqn0006"
+"Sqn0007"
+"Sqn0008"
+"/home/et/data/BPexpress_ubq/20130307_01/gnoesyNhsqc_01"
+"gnoesyNhsqc_001"
+"gnoesyNhsqc"
+0 
+stdfiles 2 2 8 0 0 2 1 65808 1 64
+4 "fid:yes"
+"log:yes"
+"procpar:yes"
+"text:yes"
+0 
+studyid 2 2 8 0 0 2 1 0 1 64
+1 "tmpstudy"
+0 
+study 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+submitopt 2 2 8 0 0 2 1 0 1 64
+1 "wkupauto"
+3 "wkupauto" "wkup" "auto" 
+svsname 2 2 8 0 0 2 1 0 1 64
+1 "$solvent$-"
+0 
+svfname 2 2 8 0 0 2 1 0 1 64
+1 "$pslabel$_"
+0 
+svfdir 2 2 8 0 0 2 1 0 1 64
+1 "/home/et/data/$samplename$"
+0 
+svfdir2 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+svs 1 1 10000000000 -10000000000 0 5 1 1 1 64
+1 150 
+0 
+tape 2 2 8 0 0 2 1 0 1 64
+1 "/dev/rmt/0mb"
+0 
+systemdir 2 2 128 0 0 0 1 0 1 64
+1 "/vnmr"
+0 
+syncVs 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 0 
+0 
+systemname 2 2 8 0 0 2 1 0 1 64
+1 "app600b-vnmrs600"
+0 
+thickFactor 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+2 0.2 0.02 
+0 
+testacquire 2 2 8 0 0 2 1 65552 1 64
+1 "y"
+0 
+trackAxis 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+2 1 1 
+0 
+timeformat 2 2 8 0 0 2 1 0 1 64
+1 "24hour"
+0 
+trackCursor 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 1 
+0 
+vloc 2 2 8 0 0 2 1 8 1 64
+1 "A0"
+0 
+useButton2 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 1 
+0 
+tunecriterion 2 2 8 0 0 3 1 0 1 64
+3 "H1"
+"Fine"
+""
+0 
+tubeid 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 4.2 
+0 
+traydisplay 4 2 4 0 0 2 1 0 1 64
+1 "y"
+0 
+tugain 1 1 60 0 2 2 1 0 1 64
+1 0 
+0 
+uiPref 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 1 
+0 
+userdir 2 2 128 0 0 0 1 0 1 64
+1 "/home/et/vnmrsys"
+0 
+useButton3 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 1 
+0 
+userremembrance 4 2 4 0 0 2 1 0 1 64
+1 "n"
+0 
+vzone 7 1 15 1 0 2 1 0 1 64
+1 1 
+0 
+vproto 2 2 8 0 0 2 1 0 1 64
+1 ""
+0 
+vnmraddr 2 2 128 0 0 2 1 4 1 64
+1 "app600b 60643 20264"
+0 
+vrack 7 1 5 1 0 2 1 0 1 64
+1 1 
+0 
+vpshift 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 0 
+0 
+vtairflow 7 1 25 0 1 2 1 0 1 64
+1 15 
+0 
+wysiwyg 2 2 8 0 0 4 1 0 1 64
+1 "n"
+2 "n" "y" 
+wcmax 1 1 1e+30 -1e+30 0 0 1 0 1 64
+1 250 
+0 
+wc2max 1 1 1e+30 -1e+30 1e-07 0 1 0 1 64
+1 167 
+0 
+waltz 4 2 4 0 0 4 1 0 1 64
+1 "y"
+0 
+wqdialogflag 4 2 4 0 0 2 1 0 1 64
+1 "y"
+0 
+y 2 2 8 0 0 2 1 4 1 64
+1 "y"
+0 
+x0 1 1 1e+30 -1e+30 0 0 1 0 1 64
+1 0 
+0 
+xmConfirmDataDelete 1 1 9.99999984307e+17 -9.99999984307e+17 0 2 1 0 1 64
+1 1 
+0 
+z0 1 1 19 19 19 2 1 73744 1 64
+1 -16263 
+0 
+y0 1 1 1e+30 -1e+30 0 0 1 0 1 64
+1 0 
+0 
+zoomSlope 1 1 9.99999984307e+17 -9.99999984307e+17 0 3 1 65808 1 64
+1 0.5 
+0 
