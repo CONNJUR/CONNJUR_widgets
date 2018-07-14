@@ -14,11 +14,6 @@
 
 char *concatStrings(char *string1, char *string2) 
 {
-   // char *finalString;
-   // int finalStringLen;
-    
-   // finalStringLen = strlen(string1) + strlen(string2);
-    
     char *catStrings = malloc(strlen(string1)+strlen(string2)+1);
     if (catStrings == NULL) {
         fprintf(stderr, "concatStrings: malloc failed\n");
