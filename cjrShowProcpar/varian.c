@@ -16,7 +16,7 @@
 
 int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, int *numValues, int *enumValues, int *basicType, int procparType, GError **error) {
     
-    int negate = 1, errorFlag = 0;
+    int negate = 1;
     char numberToString[32];
     
     g_scanner_get_next_token(scanner);
@@ -95,7 +95,6 @@ int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, i
                 return 1; 
             }
         case PP_VALUE :
-        case PP_ENUMVALUE :
             if (scanner->token =='-') {
                 negate = -1;
                 g_scanner_get_next_token(scanner);
@@ -103,12 +102,26 @@ int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, i
             if ((scanner->token == G_TOKEN_INT) && (*basicType < 2)) {
                 sprintf(numberToString, "%d", ((int) scanner->value.v_int)*negate);
                 gtk_tree_store_set(store, iter, procparType, numberToString, -1);
+                return 0;
             } else if ((scanner->token == G_TOKEN_FLOAT) && (*basicType < 2)) {
                 sprintf(numberToString, "%f", ((double) scanner->value.v_float)*negate);
                 gtk_tree_store_set(store, iter, procparType, numberToString, -1);
+                return 0;
             } else if ((scanner->token == G_TOKEN_STRING) && (*basicType == 2)) {             
                 gtk_tree_store_set(store, iter, procparType, (char *) scanner->value.v_string, -1);
-            } else { g_set_error(error, CJR_PARSE_ERROR, scanner->line, "Invalid Value: line %d", scanner->line); break; }
+                return 0;
+            } else { 
+                g_set_error(error, CJR_PARSE_ERROR, scanner->line, "Invalid Value: line %d", scanner->line); 
+                return 1; 
+            }
+        case PP_ENUMVALUE :     // Enumerated values must be strings!!
+            if ((scanner->token == G_TOKEN_STRING) && (*basicType == 2)) {             
+            //    gtk_tree_store_set(store, iter, procparType, (char *) scanner->value.v_string, -1);  // commented out so no enum in tree
+                return 0;
+            } else { 
+                g_set_error(error, CJR_PARSE_ERROR, scanner->line, "Invalid Enumerated Value: line %d", scanner->line); 
+                return 1; 
+            }
     }
 }
 
@@ -116,7 +129,6 @@ GtkTreeStore *parseProcparTree(char *procparString, GError **error)
 {
     GtkTreeStore *store;
     GtkTreeIter iterParent, iterChild;
-//    GtkTreeIter *iterCurrentPtr;
     GScanner *scanner;
     int numValues =0, numEnumValues = 0;
     char testString[] = "ins 3 1 8190 0 1e-07 4 1 3 1 64\n1 1 \n0 \ndownsamp 7 1 999 1 1 3 1 1 0 64\n1 0 \n0 ";
@@ -175,7 +187,7 @@ GtkTreeStore *parseProcparTree(char *procparString, GError **error)
                 if (parseNextToken (scanner, store, &iterParent, &numValues, &numEnumValues, &basictype, PP_ENUMVALUE, error)) break;
             }
             else {
-                gtk_tree_store_insert(store, &iterChild, &iterParent, -1);
+         //       gtk_tree_store_insert(store, &iterChild, &iterParent, -1);    // Commented out so no enum children in tree
                 if (parseNextToken (scanner, store, &iterChild, &numValues, &numEnumValues, &basictype, PP_ENUMVALUE, error)) break;
             }
         }
@@ -244,8 +256,6 @@ GtkListStore *parseProcparList(char *filename)
  //       gtk_list_store_insert_with_values(store, NULL, -1, 0, parArray[i].name, 1, parArray[i].value, -1);
         i++;
         }
-    
     fclose(procpar);
-    
     return (store);
 }

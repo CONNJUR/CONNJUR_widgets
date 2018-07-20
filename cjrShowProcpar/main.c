@@ -40,12 +40,13 @@ void inValidProcparWindow(GtkBuilder *builder, char *procparString, int badLine)
     gtk_text_view_set_editable(GTK_TEXT_VIEW(procparTextView), FALSE);
     gtk_text_buffer_set_text (buffer, (gchar *)procparString, -1);
     gtk_text_buffer_get_iter_at_line(buffer, &startIter, badLine-1);    // lines start at 0
+    gtk_text_buffer_add_mark(buffer,startMark, &startIter);
     gtk_text_buffer_get_iter_at_line(buffer, &endIter, badLine);
     gtk_text_buffer_create_tag(buffer, "highlight", "background", "green", "foreground", "white", NULL);
     gtk_text_buffer_remove_tag_by_name(buffer, "highlight", &startIter, &endIter); 
     gtk_text_buffer_apply_tag_by_name(buffer, "highlight", &startIter, &endIter);
-    gtk_text_buffer_add_mark(buffer,startMark, &startIter);
-    gtk_text_view_scroll_to_mark(GTK_TEXT_VIEW(procparTextView), startMark,0, TRUE, 0, 0.5);
+    //gtk_text_view_scroll_to_mark(GTK_TEXT_VIEW(procparTextView), startMark,0, TRUE, 0, 0.5);
+    gtk_text_view_scroll_mark_onscreen(GTK_TEXT_VIEW(procparTextView), startMark);
     textScrolledWindow = gtk_scrolled_window_new(NULL, NULL);
     gtk_widget_show(procparTextView);
     gtk_container_add(GTK_CONTAINER(textScrolledWindow), procparTextView);
@@ -55,16 +56,19 @@ void inValidProcparWindow(GtkBuilder *builder, char *procparString, int badLine)
     buttonBox = GTK_WIDGET(gtk_builder_get_object(builder, "buttonBox"));
     procparScrolledWindow = GTK_WIDGET(gtk_builder_get_object(builder, "procparScrolledWindow"));
     gtk_container_remove(GTK_CONTAINER(procparBox), procparScrolledWindow);
-    //gtk_container_remove(GTK_CONTAINER(procparBox), buttonBox);
+    gtk_container_remove(GTK_CONTAINER(procparBox), buttonBox);
     notebook = gtk_notebook_new();
     nb_label_1 = gtk_label_new("procpar");
     nb_label_2 = gtk_label_new("invalid procpar file");
     gtk_notebook_insert_page (GTK_NOTEBOOK(notebook), procparScrolledWindow, nb_label_1, 0);
     gtk_notebook_append_page (GTK_NOTEBOOK(notebook), textScrolledWindow, nb_label_2);
     if (badLine < 35) gtk_notebook_set_current_page (GTK_NOTEBOOK(notebook),-1);
-    gtk_box_pack_start(GTK_BOX(procparBox), notebook, TRUE, TRUE, 10);
+    gtk_box_pack_start(GTK_BOX(procparBox), notebook, TRUE, TRUE, 0);
+    gtk_box_pack_start(GTK_BOX(procparBox), buttonBox, FALSE, FALSE, 0);
     //gtk_box_pack_start(GTK_BOX(buttonBox), notebook, TRUE, TRUE, 10);
     gtk_widget_show(notebook);
+    gtk_widget_show(procparBox);
+   // gtk_text_view_scroll_mark_onscreen(GTK_TEXT_VIEW(procparTextView), startMark);
 }
 
 int main(int argc, char** argv) {
@@ -93,7 +97,6 @@ int main(int argc, char** argv) {
     gtk_builder_connect_signals(builder, NULL);
     
     procparView = GTK_TREE_VIEW(gtk_builder_get_object(builder,"procparTreeView"));
-    procparListStore = parseProcparList(argv[1]);
     procparString = readFileToString(argv[1], &error);
     if (error != NULL) {
                 g_warning("%s", error->message);
@@ -101,6 +104,7 @@ int main(int argc, char** argv) {
 		g_error_free(error);
 		return(1);
     }
+   // procparListStore = parseProcparList(argv[1]);               // Delete eventually.  Always check error above first!
     procparTreeStore = parseProcparTree(procparString, &error);
     
     gtk_tree_view_set_model(procparView,GTK_TREE_MODEL(procparTreeStore));
@@ -115,7 +119,7 @@ int main(int argc, char** argv) {
     g_object_unref(G_OBJECT(builder));
     gtk_widget_show(window);
 
-    gtk_main();
+    gtk_main(); 
 	
     return (EXIT_SUCCESS);
 }
