@@ -16,6 +16,8 @@
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/2D.cjrx</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/log</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/small_procpar</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/foobar</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/procpar</runcommandpicklistitem>
         </runcommandpicklist>
         <runcommand>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/procpar</runcommand>

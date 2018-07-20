@@ -24,6 +24,24 @@ typedef enum {
 	CJR_VARIAN	= 0,
 	CJR_BRUKER	= 1
 	} precessionSign;
+        
+typedef enum {
+        PP_NAME         = 0,
+        PP_VALUE        = 1,
+        PP_SUBTYPE      = 2,
+        PP_BASIC_TYPE   = 3,
+        PP_MAX          = 4,
+        PP_MIN          = 5,
+        PP_STEP_SIZE    = 6,
+        PP_GGROUP       = 7,
+        PP_DGROUP       = 8,
+        PP_PROTECTION   = 9,
+        PP_ACTIVE       = 10,
+        PP_INTPTR       = 11,
+        PP_ENUMVALUE    = 12,
+        PP_NUM_VALUES   = 13,
+        PP_ENUMS        = 14
+} procparColumns;
 
 typedef struct _SpecAxis {
 	char sign; 			// +/-, should be enum
@@ -56,6 +74,7 @@ typedef struct _VarianPar {
     int number_of_values;               // Number of values for parameter.
     char value[2048];                   // Value of parameter.  Stored as string, see subtype and basictype
     int enumerable_values;              // Number of enumerated values possible for value.  Can add array for this later.
+    char enum_value[2018];
 } VarianPar;
 
 struct _VarianPar *ptr_VarianPar;
@@ -94,9 +113,11 @@ struct _SpecParm *ptr_SpecParm;
 
 int oldParseProcpar(char *filename, struct _ReqVarianPar *varPar, GtkListStore **list);
 
-GtkListStore *parseProcpar(char *filename);
+GtkListStore *parseProcparList(char *filename);
 
-char *concatStrings(char *string1, char *string2);
+GtkTreeStore *parseProcparTree(char *newString, GError **error);
+
+
 
 #ifdef __cplusplus
 }

@@ -4,7 +4,9 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>connjur.h</itemPath>
+      <itemPath>cjrutil.h</itemPath>
+      <itemPath>varian.h</itemPath>
+      <itemPath>widgets.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,8 +15,10 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>connjur.c</itemPath>
+      <itemPath>cjrutil.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>varian.c</itemPath>
+      <itemPath>widgets.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -48,11 +52,19 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="connjur.c" ex="false" tool="0" flavor2="0">
+      <item path="cjrutil.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="connjur.h" ex="false" tool="3" flavor2="0">
+      <item path="cjrutil.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="varian.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="varian.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="widgets.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="widgets.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -76,11 +88,19 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="connjur.c" ex="false" tool="0" flavor2="0">
+      <item path="cjrutil.c" ex="false" tool="0" flavor2="0">
       </item>
-      <item path="connjur.h" ex="false" tool="3" flavor2="0">
+      <item path="cjrutil.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="varian.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="varian.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="widgets.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="widgets.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

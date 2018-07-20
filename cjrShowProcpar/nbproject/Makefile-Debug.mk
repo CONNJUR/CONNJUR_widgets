@@ -35,8 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/connjur.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/cjrutil.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/varian.o \
+	${OBJECTDIR}/widgets.o
 
 
 # C Compiler Flags
@@ -63,15 +65,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowprocpar: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowprocpar ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/connjur.o: connjur.c
+${OBJECTDIR}/cjrutil.o: cjrutil.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/connjur.o connjur.c
+	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cjrutil.o cjrutil.c
 
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+
+${OBJECTDIR}/varian.o: varian.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/varian.o varian.c
+
+${OBJECTDIR}/widgets.o: widgets.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/widgets.o widgets.c
 
 # Subprojects
 .build-subprojects:
