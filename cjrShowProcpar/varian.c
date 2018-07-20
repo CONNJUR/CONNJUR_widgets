@@ -62,7 +62,7 @@ int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, i
                 gtk_tree_store_set(store, iter, procparType, (float) negate*(scanner->value.v_float), -1);
                 return 0;
             } else { 
-                g_set_error(error, CJR_PARSE_ERROR, scanner->line, "Expected Integer: line %d, character %d", scanner->line, scanner->position); 
+                g_set_error(error, CJR_PARSE_ERROR, scanner->line, "Invalid Maximum Value: line %d, character %d", scanner->line, scanner->position); 
                 return 1; 
             }
         case PP_MIN :
@@ -75,7 +75,7 @@ int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, i
                 gtk_tree_store_set(store, iter, procparType, (float) negate*(scanner->value.v_float), -1);
                 return 0;
             } else { 
-                g_set_error(error, CJR_PARSE_ERROR, scanner->line, "Invalid Min/Max/StepSize: line %d", scanner->line); 
+                g_set_error(error, CJR_PARSE_ERROR, scanner->line, "Invalid Min/StepSize: line %d, character %d", scanner->line, scanner->position); 
                 return 1; 
             } 
         case PP_NUM_VALUES :
