@@ -45,6 +45,9 @@ int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, i
     
     int negate = 1;
     char numberToString[32];
+    //char fullEnumString[128];
+    GValue *enumValue;
+    gchar *fullEnumString;
     
     g_scanner_get_next_token(scanner);
     switch (procparType){
@@ -52,6 +55,7 @@ int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, i
             if (scanner->token == G_TOKEN_IDENTIFIER) {
                 gtk_tree_store_insert(store, iter, NULL, -1);       // New row for tree
                 gtk_tree_store_set(store, iter, procparType, (char *) scanner->value.v_identifier, -1);
+                gtk_tree_store_set(store, iter, PP_ENUMVALUE, "", -1);
                 return 0;
             } else { 
                 g_set_error(error, CJR_PARSE_ERROR, scanner->line, "Invalid parameter name: line %d", scanner->line); 
@@ -142,8 +146,12 @@ int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, i
                 return 1; 
             }
         case PP_ENUMVALUE :     // Enumerated values must be strings!!
-            if ((scanner->token == G_TOKEN_STRING) && (*basicType == 2)) {             
-            //    gtk_tree_store_set(store, iter, procparType, (char *) scanner->value.v_string, -1);  // commented out so no enum in tree
+            if ((scanner->token == G_TOKEN_STRING) && (*basicType == 2)) { 
+                gtk_tree_model_get(GTK_TREE_MODEL(store), iter, PP_ENUMVALUE, &fullEnumString, -1);
+                gtk_tree_store_set(store, iter, procparType, 
+                                    concatStrings(fullEnumString, concatStrings(",",scanner->value.v_string)), -1); 
+                gtk_tree_model_get(GTK_TREE_MODEL(store), iter, PP_ENUMVALUE, &fullEnumString, -1);
+                g_free(fullEnumString);
                 return 0;
             } else { 
                 g_set_error(error, CJR_PARSE_ERROR, scanner->line, "Invalid Enumerated Value: line %d", scanner->line); 
@@ -162,8 +170,8 @@ int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, i
  * There are additional tree possibilities.  Some procpar values are comma or semi-colon deliminated strings.  These 
  *      could be further parsed as child values of the parent parameter.  This parser function DOES NOT attempt to do this.
  *      Only the multiple value defined by the format are allocated to separate leaves of the tree.
- * In fact, for the purposes of display, the enumerated values are a distraction and another helper function can 
- *      concatenate those leaves into one, comma-separated string.
+ * In fact, for the purposes of display, the enumerated values are a distraction and this function
+ *      concatenates those leaves into one, comma-separated string.  (Sloppy code alert: always start with leading comma)
  * 
  * How it works:  This function makes use of the Glib lexical scanner: 
  *      https://developer.gnome.org/glib/stable/glib-Lexical-Scanner.html
@@ -241,14 +249,14 @@ GtkTreeStore *parseProcparTree(char *procparString, GError **error)
         if (*error != NULL) break;
         if (parseNextToken (scanner, store, &iterParent, &numValues, &numEnumValues, &basictype, PP_ENUMS, error)) break;
         for (i = 0; i < numEnumValues; i++) {
-            if (i == 0) {
+        //    if (i == 0) {
                 if (parseNextToken (scanner, store, &iterParent, &numValues, &numEnumValues, &basictype, PP_ENUMVALUE, error)) break;
-            }
-            else {
-         //       gtk_tree_store_insert(store, &iterChild, &iterParent, -1);    // Commented out so no enum children in tree
-                if (parseNextToken (scanner, store, &iterChild, &numValues, &numEnumValues, &basictype, PP_ENUMVALUE, error)) break;
-            }
-        }
+        //    }
+        //    else {
+        //        gtk_tree_store_insert(store, &iterChild, &iterParent, -1);    // Commented out so no enum children in tree, overwrite at HERE
+        //        if (parseNextToken (scanner, store, &iterChild, &numValues, &numEnumValues, &basictype, PP_ENUMVALUE, error)) break;
+        //    }
+        }                                       // Commented out rest so pile all enums in one row
         if (*error != NULL) break;
         g_scanner_peek_next_token (scanner);
     }
