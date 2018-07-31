@@ -35,10 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/cjrutil.o \
-	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/varian.o \
-	${OBJECTDIR}/widgets.o
+	${OBJECTDIR}/_ext/f944c5bd/cjrutil.o \
+	${OBJECTDIR}/_ext/f944c5bd/varian.o \
+	${OBJECTDIR}/_ext/f944c5bd/widgets.o \
+	${OBJECTDIR}/main.o
 
 
 # C Compiler Flags
@@ -65,25 +65,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowprocpar: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowprocpar ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/cjrutil.o: cjrutil.c
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/f944c5bd/cjrutil.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c
+	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
 	${RM} "$@.d"
-	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/cjrutil.o cjrutil.c
+	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/cjrutil.o /home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c
+
+${OBJECTDIR}/_ext/f944c5bd/varian.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c
+	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
+	${RM} "$@.d"
+	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/varian.o /home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c
+
+${OBJECTDIR}/_ext/f944c5bd/widgets.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c
+	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
+	${RM} "$@.d"
+	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/widgets.o /home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c
 
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
-
-${OBJECTDIR}/varian.o: varian.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/varian.o varian.c
-
-${OBJECTDIR}/widgets.o: widgets.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/widgets.o widgets.c
 
 # Subprojects
 .build-subprojects:
