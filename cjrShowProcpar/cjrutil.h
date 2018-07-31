@@ -17,6 +17,9 @@
 #define CJRUTIL_H
 
 #define CJR_PARSE_ERROR 1722
+#define MAX_FILE_STRING_SIZE 100000
+
+char *concatManyStrings(int numStrings, char *str, ...);
 
 char *concatStrings(char *string1, char *string2);
 

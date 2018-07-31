@@ -45,7 +45,6 @@ int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, i
     
     int negate = 1;
     char numberToString[32];
-    //char fullEnumString[128];
     GValue *enumValue;
     gchar *fullEnumString;
     
@@ -148,9 +147,15 @@ int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, i
         case PP_ENUMVALUE :     // Enumerated values must be strings!!
             if ((scanner->token == G_TOKEN_STRING) && (*basicType == 2)) { 
                 gtk_tree_model_get(GTK_TREE_MODEL(store), iter, PP_ENUMVALUE, &fullEnumString, -1);
-                gtk_tree_store_set(store, iter, procparType, 
-                                    concatStrings(fullEnumString, concatStrings(",",scanner->value.v_string)), -1); 
+                /*
+                 * This if statement concatenates all enumValues into one csv string.  If want tree, remove if and else.
+                 */
+                if (strcmp(fullEnumString,"") == 0)
+                gtk_tree_store_set(store, iter, procparType, scanner->value.v_string, -1);
+                else gtk_tree_store_set(store, iter, procparType, 
+                                    concatManyStrings(3,fullEnumString,",",scanner->value.v_string), -1); 
                 gtk_tree_model_get(GTK_TREE_MODEL(store), iter, PP_ENUMVALUE, &fullEnumString, -1);
+            //    printf("%s\n", fullEnumString);
                 g_free(fullEnumString);
                 return 0;
             } else { 
@@ -249,79 +254,22 @@ GtkTreeStore *parseProcparTree(char *procparString, GError **error)
         if (*error != NULL) break;
         if (parseNextToken (scanner, store, &iterParent, &numValues, &numEnumValues, &basictype, PP_ENUMS, error)) break;
         for (i = 0; i < numEnumValues; i++) {
+            /*
+             *  These series of lines are commented out so that the enumValues are not allocated to tree children
+             *      Instead, they are all sent to the same parent row and concatenated by parseNextToken
+             *      Comment them back in to build tree, but fix parseNextToken as well
+             */
         //    if (i == 0) {
                 if (parseNextToken (scanner, store, &iterParent, &numValues, &numEnumValues, &basictype, PP_ENUMVALUE, error)) break;
         //    }
         //    else {
-        //        gtk_tree_store_insert(store, &iterChild, &iterParent, -1);    // Commented out so no enum children in tree, overwrite at HERE
+        //        gtk_tree_store_insert(store, &iterChild, &iterParent, -1);    // Commented out for no enum children in tree
         //        if (parseNextToken (scanner, store, &iterChild, &numValues, &numEnumValues, &basictype, PP_ENUMVALUE, error)) break;
         //    }
-        }                                       // Commented out rest so pile all enums in one row
+        }
         if (*error != NULL) break;
         g_scanner_peek_next_token (scanner);
     }
     g_scanner_destroy(scanner);    
     return(store);
-}
-
-GtkListStore *parseProcparList(char *filename)
-{
-    GtkListStore *store = gtk_list_store_new(2, G_TYPE_STRING, G_TYPE_STRING);
-    FILE *procpar;
-    int filesize;
-    VarianPar parArray[1000];    // Hardcode max number of parameters!!!
-    int i=0, j;
-    char junk[10000]; // Data designed to be discarded
-    char c1, c2;
-    
-    procpar = fopen(filename, "r");
-    // First find size of file;
-    fseek(procpar, 0, SEEK_END);
-    filesize = ftell(procpar);
-    fseek(procpar, 0, SEEK_SET);
-    //Parse into parArray
-     while ((filesize - ftell(procpar)) > 10) {  
-    // 10 is an arbitrary buffer in case extra white space in procpar
-        fscanf(procpar, "%s",  parArray[i].name);
-        fscanf(procpar, "%d",  &parArray[i].subtype);       
-        fscanf(procpar, "%d",  &parArray[i].basictype);
-        fscanf(procpar, "%lf", &parArray[i].max_value);
-        fscanf(procpar, "%lf", &parArray[i].min_value);
-        fscanf(procpar, "%lf", &parArray[i].step_size);
-        fscanf(procpar, "%d",  &parArray[i].Ggroup);
-        fscanf(procpar, "%d",  &parArray[i].Dgroup);
-        fscanf(procpar, "%d",  &parArray[i].protection);
-        fscanf(procpar, "%d",  &parArray[i].active);
-        fscanf(procpar, "%d",  &parArray[i].intptr);            //unused
-        fscanf(procpar, "%d",  &parArray[i].number_of_values);
-        if (parArray[i].basictype < 2) 
-        {
-            for (j=0; j<parArray[i].number_of_values; j++) fscanf(procpar, "%s", parArray[i].value);
-        } else {
-            for (j=0; j<parArray[i].number_of_values; j++) {
-                fscanf(procpar, "%[\n ]", junk);  //This line skips spaces and newlines
-                c1 = fgetc(procpar);            // This kludge is to handle consecutive double quotes.
-                c2 = fgetc(procpar);
-                if (c2 != '"') {
-                    fseek(procpar,-1,SEEK_CUR);
-                    fscanf(procpar, "%[^\"]\"", parArray[i].value);
-                }
-            }
-        }
-        fscanf(procpar, "%d", &parArray[i].enumerable_values);
-        for (j=0; j<parArray[i].enumerable_values; j++) {
-                fscanf(procpar, "%[ ]", junk);
-                c1 = fgetc(procpar);            // This kludge is to handle ""
-                c2 = fgetc(procpar);
-                if (c2 != '"') {
-                    fseek(procpar,-1,SEEK_CUR);
-                    fscanf(procpar, "%[^\"]\"", junk);
-                }
-            }
-        if ((strcmp(parArray[i].name,"ap")!=0) && (strncmp(parArray[i].name,"dg",2)!=0) ) gtk_list_store_insert_with_values(store, NULL, -1, 0, parArray[i].name, 1, parArray[i].value, -1);
- //       gtk_list_store_insert_with_values(store, NULL, -1, 0, parArray[i].name, 1, parArray[i].value, -1);
-        i++;
-        }
-    fclose(procpar);
-    return (store);
 }

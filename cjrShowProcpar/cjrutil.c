@@ -18,7 +18,29 @@
 #include <string.h>
 #include <gtk/gtk.h>
 #include <sys/stat.h>
+#include <stdarg.h>
 #include "cjrutil.h"
+
+char *concatManyStrings(int numStrings, char *str, ...){
+    
+    va_list strList;
+    char *catStrings;
+    int i;
+    int strLength=strlen(str);    // Length of first string (str)
+    
+    va_start(strList, str);
+    for (i=2; i<=numStrings; i++) strLength += strlen(va_arg(strList, char *));
+    va_end(strList);
+    
+    catStrings = malloc((strLength*sizeof(char))+1); // Sum of string lengths plus \0
+    
+    va_start(strList, str);
+    strcpy(catStrings, str);
+    for (i=2; i<=numStrings; i++) strcat(catStrings,va_arg(strList, char*)); 
+    va_end(strList);
+    
+    return(catStrings);
+}
 
 char *concatStrings(char *string1, char *string2) 
 {
@@ -56,6 +78,10 @@ char *readFileToString(char* fileName, GError **error){
     
     if (stat(fileName, &fileStat) != 0)  {
         (*error) = g_error_new(G_FILE_ERROR, G_FILE_ERROR_NOENT, "Stat failure on %s", fileName);
+        return NULL;
+    }
+    if (fileStat.st_size > MAX_FILE_STRING_SIZE)  {
+        (*error) = g_error_new(G_FILE_ERROR, G_FILE_ERROR_NOENT, "%s too large to parse", fileName);
         return NULL;
     }
     fileString = (char *)malloc(fileStat.st_size)+1;     
