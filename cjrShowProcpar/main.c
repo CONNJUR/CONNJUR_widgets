@@ -18,9 +18,9 @@
 #include <sys/stat.h>
 #include <string.h>
 #include <gtk/gtk.h>
-#include "varian.h"
-#include "cjrutil.h"
-#include "widgets.h"
+#include "../lib/varian.h"
+#include "../lib/cjrutil.h"
+#include "../lib/widgets.h"
 
 /*
  * scrollToInvalidLine

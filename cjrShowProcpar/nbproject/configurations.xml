@@ -30,7 +30,6 @@
                    projectFiles="false"
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
-      <itemPath>procpar.glade</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -50,7 +49,6 @@
         </cTool>
         <linkerTool>
           <linkerLibItems>
-            <linkerOptionItem>`pkg-config --libs libxml-2.0`</linkerOptionItem>
             <linkerOptionItem>`pkg-config --libs gtk+-3.0`</linkerOptionItem>
           </linkerLibItems>
         </linkerTool>

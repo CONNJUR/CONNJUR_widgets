@@ -9,17 +9,18 @@
       </toolsSet>
       <runprofile version="9">
         <runcommandpicklist>
-          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
-          <runcommandpicklistitem>"${OUTPUT_PATH}" cnhsqc.xml</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ~/widgets/cnhsqc.xml</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/cnhsqc.xml</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/2D.cjrx</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/log</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/procpar</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/varian_nus_</runcommandpicklistitem>
           <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/hnco.fid</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/varian_nus//home/nmrbox/mgryk/Desktop/CONNJUR_spike/example_files/varian_nus/indanone2d/indanone_hsqc_nus.fid</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/varian_nus/ubiq3d/n15noe_nus.fid</runcommandpicklistitem>
         </runcommandpicklist>
-        <runcommand>"${OUTPUT_PATH}" ../example_files/hnco.fid</runcommand>
+        <runcommand>"${OUTPUT_PATH}" ../example_files/varian_nus/ubiq3d/n15noe_nus.fid</runcommand>
         <rundir></rundir>
         <buildfirst>true</buildfirst>
         <terminal-type>0</terminal-type>

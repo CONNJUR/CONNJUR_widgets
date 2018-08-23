@@ -4,7 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>connjur.h</itemPath>
+      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.h</itemPath>
+      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/connjur.h</itemPath>
+      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.h</itemPath>
+      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,8 +16,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>connjur.c</itemPath>
+      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c</itemPath>
+      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/connjur.c</itemPath>
       <itemPath>main.c</itemPath>
+      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c</itemPath>
+      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -29,6 +35,10 @@
       <itemPath>varian.glade</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>/home/nmrbox/mgryk/CONNJUR_spike/cjrShowProcpar</Elem>
+    <Elem>/home/nmrbox/mgryk/CONNJUR_spike/lib</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="Debug" type="1">
@@ -49,9 +59,45 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="connjur.c" ex="false" tool="0" flavor2="0">
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
       </item>
-      <item path="connjur.h" ex="false" tool="3" flavor2="0">
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/connjur.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/connjur.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -77,9 +123,45 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="connjur.c" ex="false" tool="0" flavor2="0">
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
       </item>
-      <item path="connjur.h" ex="false" tool="3" flavor2="0">
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/connjur.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/connjur.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c"
+            ex="false"
+            tool="0"
+            flavor2="0">
+      </item>
+      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>

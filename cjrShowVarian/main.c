@@ -19,7 +19,7 @@
 #include <string.h>
 #include <gtk/gtk.h>
 #include <math.h>
-#include "connjur.h"
+#include "../lib/connjur.h"
 
 /*
  * 
@@ -75,7 +75,7 @@ int main(int argc, char** argv) {
     // Drawing code for protein backbone
     GtkWidget *drawArea;
     drawArea = GTK_WIDGET(gtk_builder_get_object(builder,"drawingarea1"));
-    g_signal_connect (G_OBJECT(drawArea), "draw", G_CALLBACK(backbone_callback), myColorPtr);
+    g_signal_connect (G_OBJECT(drawArea), "draw", G_CALLBACK(backbone_callback), &myColor);
     g_signal_connect (G_OBJECT(gtk_builder_get_object(builder,"cst_button")),"clicked", G_CALLBACK(nbx_button_clicked), argv[1]);
     
     g_object_unref(G_OBJECT(builder));

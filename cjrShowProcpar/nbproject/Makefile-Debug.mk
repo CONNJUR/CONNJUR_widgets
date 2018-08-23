@@ -55,7 +55,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=`pkg-config --libs libxml-2.0` `pkg-config --libs gtk+-3.0`  
+LDLIBSOPTIONS=`pkg-config --libs gtk+-3.0`  
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -68,22 +68,22 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowprocpar: ${OBJECTFILES}
 ${OBJECTDIR}/_ext/f944c5bd/cjrutil.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
 	${RM} "$@.d"
-	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/cjrutil.o /home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c
+	$(COMPILE.c) -g `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/cjrutil.o /home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c
 
 ${OBJECTDIR}/_ext/f944c5bd/varian.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
 	${RM} "$@.d"
-	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/varian.o /home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c
+	$(COMPILE.c) -g `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/varian.o /home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c
 
 ${OBJECTDIR}/_ext/f944c5bd/widgets.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
 	${RM} "$@.d"
-	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/widgets.o /home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c
+	$(COMPILE.c) -g `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/widgets.o /home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c
 
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.c) -g `pkg-config --cflags libxml-2.0` `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+	$(COMPILE.c) -g `pkg-config --cflags gtk+-3.0` -std=c11  -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
 
 # Subprojects
 .build-subprojects:

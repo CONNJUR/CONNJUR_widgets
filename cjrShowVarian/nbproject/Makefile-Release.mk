@@ -35,7 +35,10 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/connjur.o \
+	${OBJECTDIR}/_ext/f944c5bd/cjrutil.o \
+	${OBJECTDIR}/_ext/f944c5bd/connjur.o \
+	${OBJECTDIR}/_ext/f944c5bd/varian.o \
+	${OBJECTDIR}/_ext/f944c5bd/widgets.o \
 	${OBJECTDIR}/main.o
 
 
@@ -63,10 +66,25 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowvarian: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/cjrshowvarian ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/connjur.o: connjur.c
-	${MKDIR} -p ${OBJECTDIR}
+${OBJECTDIR}/_ext/f944c5bd/cjrutil.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c
+	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
 	${RM} "$@.d"
-	$(COMPILE.c) -O2 -std=c11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/connjur.o connjur.c
+	$(COMPILE.c) -O2 -std=c11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/cjrutil.o /home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c
+
+${OBJECTDIR}/_ext/f944c5bd/connjur.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/connjur.c
+	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -std=c11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/connjur.o /home/nmrbox/mgryk/CONNJUR_spike/lib/connjur.c
+
+${OBJECTDIR}/_ext/f944c5bd/varian.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c
+	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -std=c11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/varian.o /home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c
+
+${OBJECTDIR}/_ext/f944c5bd/widgets.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c
+	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -std=c11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/widgets.o /home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c
 
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
