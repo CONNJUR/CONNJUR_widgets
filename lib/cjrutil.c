@@ -92,3 +92,46 @@ char *readFileToString(char* fileName, GError **error){
     g_file_get_contents(fileName, &fileString, NULL, error);  
     return fileString;
 }
+
+/*
+ *  This function swaps the bytes of a 32-bit float, from Big Endian to the endian of the host
+ *      It makes use of the Glib function GINT_FROM_BE which byte swaps ints.
+ *      There is no guarantee the float is encoded properly, just that the 4 bytes are reversed in order.
+ */
+
+float FLOAT_FROM_BE(float swapFloat){
+    
+    int f;
+    
+    memcpy(&f, &swapFloat, sizeof(float));
+    f = GINT_FROM_BE(f);
+    memcpy(&swapFloat, &f, sizeof(float));
+    
+    return swapFloat;
+}
+
+/*
+ *  Teaching moment here.  Knowledgeable programmers can skip this.
+ *  
+ *  The above function uses 'call by value'.  All c functions use call by value.
+ *      In call by value, copies of the function parameters are made for the local function.
+ *      So in the above example, some external function call had a float parameter, say original_float
+ *      The value for original_float is copied to swapFloat.
+ *      Next, the bytes making up swapFloat are copied to a third memory location where f was initialized.
+ *      The Glib function swaps those bytes, treating f as a 32-bit int.
+ *      Finally, the bytes from f are copied back to swapFloat and returned as a new float.
+ * 
+ *  All c functions use call by value.  However, we can get 'call by reference' by passing pointers as parameters.
+ *  This is shown below.
+ */
+
+void FLOAT_FROM_BE_INPLACE(float *swapFloat){
+    
+    int f;
+    
+    memcpy(&f, swapFloat, sizeof(float));
+    f = GINT_FROM_BE(f);
+    memcpy(swapFloat, &f, sizeof(float));
+    
+    return;
+}

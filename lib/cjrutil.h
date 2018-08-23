@@ -27,4 +27,8 @@ void readFileToString_alt(char *fileName, char **fileString, GError **error);
 
 char *readFileToString(char*fileName, GError **error);
 
+float FLOAT_FROM_BE(float swapFloat);
+
+void FLOAT_FROM_BE_INPLACE(float *swapFloat);
+
 #endif /* CJRUTIL_H */

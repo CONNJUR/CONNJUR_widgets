@@ -43,6 +43,10 @@
 
 int parseNextToken (GScanner *scanner, GtkTreeStore *store, GtkTreeIter *iter, int *numValues, int *enumValues, int *basicType, int procparType, GError **error) {
     
+    /*
+     *  Varian basictype: 0 (undefined), 1 (real), 2 (string)
+     */
+    
     int negate = 1;
     char numberToString[32];
     GValue *enumValue;
