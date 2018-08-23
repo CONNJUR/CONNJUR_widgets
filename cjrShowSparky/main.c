@@ -44,16 +44,15 @@ int main(int argc, char** argv) {
     gtk_init(&argc, &argv);
     
     sparkyHeader = readSparkyHeader(argv[1], &error);
-    
-    //printf("%s\n",sparkyHeaderAsString(sparkyHeader));
-    //printSparkyStructSizes();
-
     if (error != NULL) {
                 g_warning("%s", error->message);
                 showDialog(error->message, NULL);
 		g_error_free(error);
 		return(1);
     }
+    
+    //printf("%s\n",sparkyHeaderAsString(sparkyHeader));
+    //printSparkyStructSizes();
     
     sprintf(sparkyOverall, "<b>%dD FILE:</b> \t%s\nconverted by:\t%s\non %s\n<b>COMMENT:</b>\t%s", sparkyHeader->file.naxis,
             argv[1], sparkyHeader->file.owner, sparkyHeader->file.date, sparkyHeader->file.comment);

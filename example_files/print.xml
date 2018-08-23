@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<premis:premis xmlns:premis="http://www.loc.gov/premis/v3" xmlns:builder="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="3.0" xsi:schemaLocation="http://www.loc.gov/premis/v3 http://www.loc.gov/standards/premis/premis.xsd">
+  <premis:object xsi:type="premis:representation">
+    <premis:objectIdentifier>
+      <premis:objectIdentifierType>local</premis:objectIdentifierType>
+      <premis:objectIdentifierValue>13C,15N HSQC_000</premis:objectIdentifierValue>
+    </premis:objectIdentifier>
+    <premis:significantProperties>
+      <premis:significantPropertiesType>format</premis:significantPropertiesType>
+      <premis:significantPropertiesValue>varian</premis:significantPropertiesValue>
+      <premis:significantPropertiesExtension>
+        <connjur:spectrum xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <!--Varian import-->
+          <connjur:spectrumIdentifier>13C,15N HSQC_000</connjur:spectrumIdentifier>
+          <connjur:spectralFormat>
+            <connjur:formatName>varian</connjur:formatName>
+            <connjur:formatSpecification>https://www.agilent.com/cs/library/usermanuals/public/0199937900a.pdf</connjur:formatSpecification>
+            <connjur:formatByteOrder>Big Endian</connjur:formatByteOrder>
+            <connjur:formatNumericType>Integer 4 byte</connjur:formatNumericType>
+          </connjur:spectralFormat>
+          <connjur:spectralDimensions>2</connjur:spectralDimensions>
+          <connjur:spectralAxis>
+            <connjur:sign>+</connjur:sign>
+            <connjur:negateImaginaries>true</connjur:negateImaginaries>
+            <connjur:sourceChannel defaultSetting="false">1</connjur:sourceChannel>
+            <connjur:sweepwidth units="Hz">8511</connjur:sweepwidth>
+            <connjur:spectralFrequency>600</connjur:spectralFrequency>
+            <connjur:referencePeakPosition>5000</connjur:referencePeakPosition>
+            <connjur:referencePeakFrequency>2795</connjur:referencePeakFrequency>
+            <connjur:domain>time</connjur:domain>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:constantPhase>051</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:firstScalePoint>-2205</connjur:firstScalePoint>
+          </connjur:spectralAxis>
+          <connjur:spectralAxis>
+            <connjur:sign>+</connjur:sign>
+            <connjur:negateImaginaries>true</connjur:negateImaginaries>
+            <connjur:sourceChannel defaultSetting="false">2</connjur:sourceChannel>
+            <connjur:sweepwidth units="Hz">3000</connjur:sweepwidth>
+            <connjur:spectralFrequency>151</connjur:spectralFrequency>
+            <connjur:referencePeakPosition>5016</connjur:referencePeakPosition>
+            <connjur:referencePeakFrequency>2795</connjur:referencePeakFrequency>
+            <connjur:domain>time</connjur:domain>
+            <connjur:pointType>complex</connjur:pointType>
+            <connjur:constantPhase>001</connjur:constantPhase>
+            <connjur:linearPhase>000</connjur:linearPhase>
+            <connjur:firstScalePoint>-2220</connjur:firstScalePoint>
+          </connjur:spectralAxis>
+        </connjur:spectrum>
+      </premis:significantPropertiesExtension>
+    </premis:significantProperties>
+  </premis:object>
+
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_000</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>acquisition</premis:eventType>
+    <premis:eventDateTime>Fri Jun 02 00:00:00 EDT 2000</premis:eventDateTime>
+    <premis:eventDetailInformation/>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>CONNJUR spectrum translator</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_000</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_001</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>Negates values once for each imaginary quadrature.</premis:eventType>
+    <premis:eventDateTime>Fri May 11 11:16:37 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation/>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>CONNJUR spectrum translator</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_001</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+  <premis:event>
+    <premis:eventIdentifier>
+      <premis:eventIdentifierType>local</premis:eventIdentifierType>
+      <premis:eventIdentifierValue>Event_002</premis:eventIdentifierValue>
+    </premis:eventIdentifier>
+    <premis:eventType>nmrPipe -fn SOL -verb -mode 1 -fl 16 -fs 1 -sf 1.1 -head 0</premis:eventType>
+    <premis:eventDateTime>Sun May 27 15:56:53 EDT 2018</premis:eventDateTime>
+    <premis:eventDetailInformation>
+      <premis:eventDetailExtension>
+        <connjur:configuration xmlns:connjur="https://raw.githubusercontent.com/CONNJUR/CONNJUR_ML/master/connjur_ml.xsd">
+          <connjur:mode>LOWPASS</connjur:mode>
+          <connjur:shape>BOXCAR</connjur:shape>
+          <connjur:splineNoise>1.0</connjur:splineNoise>
+          <connjur:smoothFactor>1.1</connjur:smoothFactor>
+          <connjur:polynomialExtrapolation>false</connjur:polynomialExtrapolation>
+          <connjur:mirrorImageExtrapolation>false</connjur:mirrorImageExtrapolation>
+          <connjur:adjustSequentialData>true</connjur:adjustSequentialData>
+          <connjur:adjustOverSampledData>true</connjur:adjustOverSampledData>
+          <connjur:skipPoints>0</connjur:skipPoints>
+          <connjur:filterLength units="Points">16</connjur:filterLength>
+          <connjur:dimension>1</connjur:dimension>
+        </connjur:configuration>
+      </premis:eventDetailExtension>
+    </premis:eventDetailInformation>
+    <premis:linkingAgentIdentifier>
+      <premis:linkingAgentIdentifierType>local</premis:linkingAgentIdentifierType>
+      <premis:linkingAgentIdentifierValue>NMRPipe</premis:linkingAgentIdentifierValue>
+    </premis:linkingAgentIdentifier>
+    <premis:linkingObjectIdentifier>
+      <premis:linkingObjectIdentifierType>local</premis:linkingObjectIdentifierType>
+      <premis:linkingObjectIdentifierValue>13C,15N HSQC_002</premis:linkingObjectIdentifierValue>
+    </premis:linkingObjectIdentifier>
+  </premis:event>
+
+  <premis:agent>
+    <premis:agentIdentifier>
+      <premis:agentIdentifierType>local</premis:agentIdentifierType>
+      <premis:agentIdentifierValue>NMRPipe</premis:agentIdentifierValue>
+    </premis:agentIdentifier>
+    <premis:agentName>NMRPipe</premis:agentName>
+    <premis:agentType>software</premis:agentType>
+    <premis:agentNote>9.2</premis:agentNote>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_002</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+  </premis:agent>
+  <premis:agent>
+    <premis:agentIdentifier>
+      <premis:agentIdentifierType>local</premis:agentIdentifierType>
+      <premis:agentIdentifierValue>CONNJUR spectrum translator</premis:agentIdentifierValue>
+    </premis:agentIdentifier>
+    <premis:agentName>CONNJUR spectrum translator</premis:agentName>
+    <premis:agentType>software</premis:agentType>
+    <premis:agentNote>untagged version</premis:agentNote>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_000</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+    <premis:linkingEventIdentifier>
+      <premis:linkingEventIdentifierType>local</premis:linkingEventIdentifierType>
+      <premis:linkingEventIdentifierValue>Event_001</premis:linkingEventIdentifierValue>
+    </premis:linkingEventIdentifier>
+  </premis:agent>
+</premis:premis>

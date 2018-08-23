@@ -1,0 +1,38 @@
+FILE: hncacb.dat DIM: 3 QUAD: Real 2DMODE: States Not Transposed
+BYTES: 134219776 PRED: 134219776 MIN: 0 MAX: 0 VALID: 0
+ORDER: 2 1 3 PIPE: 1 CUBE: 0 FILES: 1 1024x256x128x1 3D Stream
+CONVERTED: 6/18/2000 2:41 PM
+               X-Axis        Y-Axis        Z-Axis   
+
+DATA SIZE:          1024          256          128
+APOD SIZE:           512          128           64
+SW Hz:       4255.319336 10600.000000  2200.000000
+SW PPM:            7.097       70.312       36.213
+Hz/POINT:          4.156       41.406       17.188
+AQTIME SEC:     0.120320     0.012075     0.029091
+OBS MHz:      599.553223   150.757401    60.752201
+ORIG Hz:     2865.223633  1525.489258  6055.571289
+DOMAIN:             Freq         Freq         Freq
+MODE:               Real         Real         Real
+NAME:                 1H          13C          15N
+APOD NAME:           GMB           SP           SP
+APOD Q1:          -7.000        0.390        0.390
+APOD Q2:           0.100        0.980        0.980
+APOD Q3:           0.000        2.000        2.000
+LB:                0.000        0.000        0.000
+GB:                0.000        0.000        0.000
+GOFF:              0.000        0.000        0.000
+C1:                0.500        0.500        0.500
+TD SIZE:            1024          128           64
+ZF SIZE:            2048          256          128
+FT SIZE:            2048          256          128
+P0:               62.000        0.000        0.000
+P1:                0.000        0.000        0.000
+EXT X1:                1         None         None
+EXT XN:             1024         None         None
+PPM FIRST:        11.869       80.156      135.606
+PPM LAST:          4.779       10.119       99.677
+PPM OFFSET:        0.000        0.000        0.000
+PPM CAR:           4.772       45.000      117.500
+CENTER:             1025          129           65
+
