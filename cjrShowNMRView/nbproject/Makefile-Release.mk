@@ -37,7 +37,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/f944c5bd/cjrutil.o \
 	${OBJECTDIR}/_ext/f944c5bd/nmrview.o \
-	${OBJECTDIR}/_ext/f944c5bd/sparky.o \
 	${OBJECTDIR}/_ext/f944c5bd/widgets.o \
 	${OBJECTDIR}/main.o
 
@@ -75,11 +74,6 @@ ${OBJECTDIR}/_ext/f944c5bd/nmrview.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/nmrvi
 	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -std=c11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/nmrview.o /home/nmrbox/mgryk/CONNJUR_spike/lib/nmrview.c
-
-${OBJECTDIR}/_ext/f944c5bd/sparky.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.c
-	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -std=c11 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/f944c5bd/sparky.o /home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.c
 
 ${OBJECTDIR}/_ext/f944c5bd/widgets.o: /home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c
 	${MKDIR} -p ${OBJECTDIR}/_ext/f944c5bd

@@ -70,6 +70,19 @@ typedef struct _nmrviewHeaderStruct {
 
 char *nmrviewHeaderAsString(nmrviewHeaderStruct *header);
 
+/*
+ * readNMRViewHeader
+ * 
+ * This function parses individual fields of a binary NMRView (.nv) file.  
+ * 
+ * How it works:  This function just uses fread to read the binary header directly into the NMRViewHeader struct.
+ * NMRView files can be either endian.  This function does NOT correct endianess.  That should be done elsewhere.
+ * 
+ * Inputs: NMRView filename
+ *         GError for error callbacks.
+ * Output: nmrViewHeader (success or failure).  If failure, GError should not be NULL.
+ */
+
 nmrviewHeaderStruct readNMRViewHeader(char* fileName, GError **error);
 
 #endif /* NMRVIEW_H */

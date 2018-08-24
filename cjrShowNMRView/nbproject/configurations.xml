@@ -6,7 +6,6 @@
                    projectFiles="true">
       <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.h</itemPath>
       <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/nmrview.h</itemPath>
-      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.h</itemPath>
       <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -19,7 +18,6 @@
       <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c</itemPath>
       <itemPath>main.c</itemPath>
       <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/nmrview.c</itemPath>
-      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.c</itemPath>
       <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -75,16 +73,6 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.c"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c"
             ex="false"
             tool="0"
@@ -135,16 +123,6 @@
             flavor2="0">
       </item>
       <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/nmrview.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.c"
-            ex="false"
-            tool="0"
-            flavor2="0">
-      </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.h"
             ex="false"
             tool="3"
             flavor2="0">

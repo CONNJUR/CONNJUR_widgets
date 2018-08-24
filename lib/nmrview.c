@@ -22,22 +22,16 @@
 #include "../lib/nmrview.h"
 
 /*
- * readSparkyHeader
+ * readNMRViewHeader
  * 
- * This function parses individual fields of a binary Sparky (.ucsf) file.  
+ * This function parses individual fields of a binary NMRView (.nv) file.  
  * 
- * How it works:  This function just uses fread to read the binary header directly into the sparkyHeader struct.
- *      The sparkyHeader struct uses the NMR_HEADER and NMR_AXIS structures defined by Sparky.
- *      A small nuance, because of some alignment padding done by the compiler, we don't read the entire header
- *          in one shot.  Rather, we read segments up until a known pad point.
- *      The header field naxis tells us how many NMR_AXIS structures to read.  Sparky restricts between 2 and 4.
- * Sparky files are always big endian.  This function does NOT correct endianess.  That should be done elsewhere.
+ * How it works:  This function just uses fread to read the binary header directly into the NMRViewHeader struct.
+ * NMRView files can be either endian.  This function does NOT correct endianess.  That should be done elsewhere.
  * 
- * Inputs: sparky filename
+ * Inputs: NMRView filename
  *         GError for error callbacks.
- * Output: sparkyHeader (success) or NULL (failure).  If NULL, GError should not be NULL.
- * 
- * Sparky files are always big endian.  THIS FUNCTION DOES NOT CORRECT ENDIANESS.  That should be done elsewhere.
+ * Output: nmrViewHeader (success or failure).  If failure, GError should not be NULL.
  */
 
 nmrviewHeaderStruct readNMRViewHeader(char* fileName, GError **error){

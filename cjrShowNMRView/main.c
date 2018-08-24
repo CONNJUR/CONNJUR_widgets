@@ -56,15 +56,14 @@ int main(int argc, char** argv) {
     
 //   printf("%ld\t%ld\t%ld\n", sizeof(nmrviewFileHeaderStruct), sizeof(nmrviewDimHeaderStruct), sizeof(nmrviewHeaderStruct));
     
- /*   sprintf(sparkyOverall, "<b>%dD FILE:</b> \t%s\nconverted by:\t%s\non %s\n<b>COMMENT:</b>\t%s", sparkyHeader->file.naxis,
-            argv[1], sparkyHeader->file.owner, sparkyHeader->file.date, sparkyHeader->file.comment);
-    strcpy(sparkyDimensions,"");
-    for(i=0; i<sparkyHeader->file.naxis; i++) {
-        sprintf(&sparkyDimensions[strlen(sparkyDimensions)],"%s: %d points, %.2f MHz, %.1f Hz, %.2f ppm\n", 
-                sparkyHeader->axis[i].nucleus, GINT_FROM_BE(sparkyHeader->axis[i].npoints),
-                FLOAT_FROM_BE(sparkyHeader->axis[i].spectrometer_freq), FLOAT_FROM_BE(sparkyHeader->axis[i].spectral_width),
-                FLOAT_FROM_BE(sparkyHeader->axis[i].xmtr_freq));
-    } */
+    sprintf(nmrviewOverall, "<b>%dD FILE</b>\n", nmrviewHeader.file.nDim);
+    strcpy(nmrviewDimensions,"");
+    for(i=0; i<nmrviewHeader.file.nDim; i++) {
+        sprintf(&nmrviewDimensions[strlen(nmrviewDimensions)],"%s: %d points, %.2f MHz, %.1f Hz, %.2f ppm\n", 
+                nmrviewHeader.axis[i].label, nmrviewHeader.axis[i].size,
+                nmrviewHeader.axis[i].sf, nmrviewHeader.axis[i].sw,
+                nmrviewHeader.axis[i].refval);
+    } 
 
     builder = gtk_builder_new();    // NEED A SOLUTION FOR GLADE PATH
     if (!gtk_builder_add_from_file(builder, "/home/nmrbox/mgryk/CONNJUR_spike/cjrShowSparky/glades/sparky.glade", &error)) {
@@ -78,8 +77,8 @@ int main(int argc, char** argv) {
     
     nmrviewLabel1 = GTK_WIDGET(gtk_builder_get_object(builder, "sparkyLabel1"));
     nmrviewLabel2 = GTK_WIDGET(gtk_builder_get_object(builder, "sparkyLabel2"));
-  //  gtk_label_set_markup(GTK_LABEL(sparkyLabel1), sparkyOverall);
-  //  gtk_label_set_text(GTK_LABEL(sparkyLabel2), sparkyDimensions);
+    gtk_label_set_markup(GTK_LABEL(nmrviewLabel1), nmrviewOverall);
+    gtk_label_set_text(GTK_LABEL(nmrviewLabel2), nmrviewDimensions);
     
     g_object_unref(G_OBJECT(builder));
     gtk_widget_show(window);
