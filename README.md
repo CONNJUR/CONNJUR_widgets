@@ -6,6 +6,8 @@ The purpose of this repository is to create/document spike solutions for metadat
 
 The first spikes released here are a series of graphical widgets based on the GTK+ library used in the LINUX operating systems used by NMRbox.  This code base is written primarily in C and includes both graphical widgets as well as base code for parsing the various NMR file formats, CONNJUR_ML, and RDF.   
 
+Better documentation can be found on the [wiki](https://github.com/gryk/CONNJUR_spike/wiki).
+
 ## Projects and Status
 
 | Project  | State | Description |
