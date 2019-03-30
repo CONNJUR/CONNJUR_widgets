@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/log</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/small_procpar</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/foobar</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid/procpar</runcommandpicklistitem>
+          <runcommandpicklistitem>../example_files/procpar_bad</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.fid</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/2D.cjrx</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/procpar_bad</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.ucsf</runcommandpicklistitem>
+          <runcommandpicklistitem>"${OUTPUT_PATH}" ../example_files/nhsqc.nv</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}" ../example_files/nhsqc.nv</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <platform>2</platform>
+      </toolsSet>
+      <runprofile version="9">
+        <runcommandpicklist>
+          <runcommandpicklistitem>"${OUTPUT_PATH}"</runcommandpicklistitem>
+        </runcommandpicklist>
+        <runcommand>"${OUTPUT_PATH}"</runcommand>
+        <rundir></rundir>
+        <buildfirst>true</buildfirst>
+        <terminal-type>0</terminal-type>
+        <remove-instrumentation>0</remove-instrumentation>
+        <environment>
+        </environment>
+      </runprofile>
+    </conf>
+  </confs>
+</configurationDescriptor>
