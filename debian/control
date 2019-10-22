@@ -1,0 +1,15 @@
+Source: connjur-widgets
+Section: science 
+Priority: optional
+Maintainer: Michael Gryk <gyrk@uchc.edu> 
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: https://www.nmrbox.org
+#Vcs-Git: https://anonscm.debian.org/git/collab-maint/connjur-widgets.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/connjur-widgets.git
+
+Package: connjur-widgets
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A series of graphical widgets.  
+   A series of graphical widgets.  
