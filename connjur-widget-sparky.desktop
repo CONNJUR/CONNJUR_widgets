@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Procpar
+Type=Application
+Terminal=False
+Encoding=UTF-8
+Exec=/usr/software/connjur/cjrshowsparky
+Icon=ConnjurWB.png
+Categories=All NMRbox software
+MimeType=application/connjur-widget-sparky
