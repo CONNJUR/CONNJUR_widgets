@@ -1,1 +1,5 @@
 bin/* /usr/software/connjur
+connjur-widget-nmrview.desktop /usr/share/applications
+connjur-widget-procpar.desktop /usr/share/applications
+connjur-widget-sparky.desktop /usr/share/applications
+connjur-widget.xml /usr/share/connjur

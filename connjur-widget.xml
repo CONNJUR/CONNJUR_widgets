@@ -1,9 +1,5 @@
 <?xml version="1.0"?>
 <mime-info xmlns='http://www.freedesktop.org/standards/shared-mime-info'>
-  <mime-type type="application/connjur-widget-procpar">
-    <comment>Varian procpar file</comment>
-    <glob pattern="procpar"/>
-  </mime-type>
   <mime-type type="application/connjur-widget-sparky">
     <comment>Sparky file</comment>
     <glob pattern="*.ucsf"/>
@@ -11,5 +7,9 @@
   <mime-type type="application/connjur-widget-nmrview">
     <comment>NMRView file</comment>
     <glob pattern="*.nv"/>
+  </mime-type>
+  <mime-type type="application/connjur-widget-procpar">
+    <comment>Varian procpar file</comment>
+    <glob pattern="procpar"/>
   </mime-type>
 </mime-info>

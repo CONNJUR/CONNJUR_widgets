@@ -1,9 +1,8 @@
 [Desktop Entry]
-Name=Procpar
+Name=Show Varian Procpar
 Type=Application
-Terminal=False
-Encoding=UTF-8
+Terminal=false
 Exec=/usr/software/connjur/cjrshowprocpar
-Icon=ConnjurWB.png
-Categories=All NMRbox software
+Icon=/usr/share/icons/hicolor/48x48/apps/ConnjurWB.png
+Categories=X-All NMRbox software;Science
 MimeType=application/connjur-widget-procpar

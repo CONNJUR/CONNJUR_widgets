@@ -20,3 +20,5 @@ Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: Example data for connjur-widgets. 
 	Example data for connjur-widgets. 
+XB-Nmrbox-Software: connjur-widgets 
+XB-Nmrbox-Version: 1 
