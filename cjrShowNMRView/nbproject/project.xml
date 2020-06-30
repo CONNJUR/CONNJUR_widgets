@@ -10,7 +10,7 @@
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList>
-                <sourceRootElem>/home/nmrbox/mgryk/CONNJUR_spike/lib</sourceRootElem>
+                <sourceRootElem>../lib</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
