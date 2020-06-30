@@ -31,4 +31,14 @@ float FLOAT_FROM_BE(float swapFloat);
 
 void FLOAT_FROM_BE_INPLACE(float *swapFloat);
 
+/*
+ *  This function swaps the bytes of a 32-bit float, from Big Endian to Little Endian or vice versa.
+ *      It makes use of the Glib function GUINT32_SWAP_LE_BE which byte swaps ints.
+ *      There is no guarantee the float is encoded properly, just that the 4 bytes are reversed in order.
+ */
+
+void BYTESWAP_FLOAT(float *swapFloat);
+
+char *cjr_terminate_string(char *string, int index);
+
 #endif /* CJRUTIL_H */

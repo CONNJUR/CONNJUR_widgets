@@ -58,10 +58,18 @@ nmrviewHeaderStruct readNMRViewHeader(char* fileName, GError **error){
     if (nmrviewBuffer.file.magic != NMRVIEW_MAGIC) {
         if (nmrviewBuffer.file.magic == NMRVIEW_CIGAM) (*error) = g_error_new(G_FILE_ERROR, G_FILE_ERROR_NOENT, "Wrong Endian: %s", fileName);
         else (*error) = g_error_new(G_FILE_ERROR, G_FILE_ERROR_NOENT, " Not nmrview file: %s", fileName);
-        return nmrviewBuffer;
     }
     
     return nmrviewBuffer;
+}
+
+void byteSwapNMRViewBuffer(nmrviewHeaderStruct *header){
+    
+    int i;          
+    
+    if (header->file.magic == NMRVIEW_CIGAM) {
+        printf("here\n");
+    }
 }
 
 /*
@@ -94,7 +102,7 @@ char *nmrviewHeaderAsString(nmrviewHeaderStruct *header){
                 header->axis[i].refval, header->axis[i].refunits);
         sprintf(&nmrviewString[strlen(nmrviewString)],
                 "label: %s\t",
-                header->axis[i].label);                 // Take care here.  If label is 16, no \0
+                cjr_terminate_string(header->axis[i].label, 16));      // Extra care here.  If label is 16 bytes, no \0
         sprintf(&nmrviewString[strlen(nmrviewString)],
                 "complex: %d\tfreq_dom: %d\tph0: %.2f\tph1: %.2f\tvsize: %d\n",
                 header->axis[i].complex, header->axis[i].freqdomain, 
