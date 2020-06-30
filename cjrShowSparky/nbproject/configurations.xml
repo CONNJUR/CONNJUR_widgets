@@ -4,10 +4,10 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.h</itemPath>
-      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.h</itemPath>
-      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.h</itemPath>
-      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.h</itemPath>
+      <itemPath>../lib/cjrutil.h</itemPath>
+      <itemPath>../lib/sparky.h</itemPath>
+      <itemPath>../lib/varian.h</itemPath>
+      <itemPath>../lib/widgets.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -16,11 +16,11 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c</itemPath>
+      <itemPath>../lib/cjrutil.c</itemPath>
       <itemPath>main.c</itemPath>
-      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.c</itemPath>
-      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c</itemPath>
-      <itemPath>/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c</itemPath>
+      <itemPath>../lib/sparky.c</itemPath>
+      <itemPath>../lib/varian.c</itemPath>
+      <itemPath>../lib/widgets.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -35,7 +35,7 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
-    <Elem>/home/nmrbox/mgryk/CONNJUR_spike/lib</Elem>
+    <Elem>../lib</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -55,42 +55,42 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c"
+      <item path="../lib/cjrutil.c"
             ex="false"
             tool="0"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.h"
+      <item path="../lib/cjrutil.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.c"
+      <item path="../lib/sparky.c"
             ex="false"
             tool="0"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.h"
+      <item path="../lib/sparky.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c"
+      <item path="../lib/varian.c"
             ex="false"
             tool="0"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.h"
+      <item path="../lib/varian.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c"
+      <item path="../lib/widgets.c"
             ex="false"
             tool="0"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.h"
+      <item path="../lib/widgets.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -119,42 +119,42 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.c"
+      <item path="../lib/cjrutil.c"
             ex="false"
             tool="0"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/cjrutil.h"
+      <item path="../lib/cjrutil.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.c"
+      <item path="../lib/sparky.c"
             ex="false"
             tool="0"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/sparky.h"
+      <item path="../lib/sparky.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.c"
+      <item path="../lib/varian.c"
             ex="false"
             tool="0"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/varian.h"
+      <item path="../lib/varian.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.c"
+      <item path="../lib/widgets.c"
             ex="false"
             tool="0"
             flavor2="0">
       </item>
-      <item path="/home/nmrbox/mgryk/CONNJUR_spike/lib/widgets.h"
+      <item path="../lib/widgets.h"
             ex="false"
             tool="3"
             flavor2="0">
