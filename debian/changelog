@@ -1,3 +1,9 @@
+connjur-widgets (1-4) unstable; urgency=medium
+
+  * Label as NMRbox software
+
+ -- Gerard Weatherby <gweatherby@uchc.edu>  Fri, 29 Jan 2021 17:55:41 -0500
+
 connjur-widgets (1-3) unstable; urgency=medium
 
   * Launchers for procpar, sparky, nmrview

@@ -14,6 +14,8 @@ Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: A series of graphical widgets.  
    A series of graphical widgets.  
    Source directory: https://github.com/CONNJUR/CONNJUR_widgets
+XB-Nmrbox-Software: connjur-widgets 
+XB-Nmrbox-Version: 1 
 
 Package: connjur-widgets-data
 Architecture: any
