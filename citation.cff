@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: Widget Design as a Guide to Information Modeling
+message: Please cite this software using these metadata.
+type: software
+authors:
+  - given-names: Michael R
+    family-names: Gryk
+    email: gryk2@illinois.edu
+    affiliation: 'University of Illinois, Urbana-Champaign'
+    orcid: 'https://orcid.org/0000-0002-3483-8384'
+identifiers:
+  - type: doi
+    value: 10.21900/iconf.2019.103311
+  - type: url
+    value: 'http://hdl.handle.net/2142/103311'
